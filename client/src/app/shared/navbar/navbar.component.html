@@ -1,0 +1,53 @@
+<div class="app-header">
+    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }" *ngIf="isLoggedIn$ | async; else loginNow">
+      <div nz-col nzSpan="12">
+        <!-- 
+        <span class="header-trigger" (click)="changeCollapse(!isCollapsed)">
+          <i class="trigger"
+             nz-icon
+             [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+          ></i>
+      </span>
+-->
+      </div>
+      <div nz-col nzSpan="12" style="text-align: right;">
+        <a nz-dropdown [nzDropdownMenu]="menu" nzTrigger="click" nzPlacement="bottomRight">
+          <nz-avatar nzSize="large" nzIcon="user"></nz-avatar> 
+        </a>
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+          <ul nz-menu nzSelectable>
+            <li nz-menu-divider></li>
+            <li nz-menu-item>Mi Perfil</li>
+            <li nz-menu-item>Mi Cuenta</li>
+            <li nz-menu-divider></li>
+            <li nz-menu-item nzDanger>Cerrar sesión
+              <i nz-icon nzType="right" nzTheme="outline"></i>
+            </li>
+          </ul>
+        </nz-dropdown-menu>
+      </div>
+    </div>
+    //TODO: CREAR MENU PARA LOGIN Y REGISTRO
+    <ng-template #loginNow>
+        <div nz-col nzSpan="12">
+        </div>
+        <div nz-col nzSpan="12" style="text-align: right;">
+          <ul nz-menu nzMode="horizontal">
+            <li nz-menu-item >
+              <span nz-icon nzType="mail"></span>
+              Navigation One
+            </li>
+            <li nz-menu-item >
+              <span nz-icon nzType="mail"></span>
+              Navigation One
+            </li>
+            <li nz-menu-item >
+              <span nz-icon nzType="mail"></span>
+              Navigation One
+            </li>
+          </ul>
+        </div>
+
+    </ng-template>
+   
+  </div>

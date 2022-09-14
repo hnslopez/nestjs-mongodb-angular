@@ -1,0 +1,62 @@
+<div class="container-fluid px-0  h-100 bg" style="background-image: url('assets/background.jpg');">
+    <div class="d-flex flex-column justify-content-center h-100 blur">
+      <div class="container">
+        <div class="wrap d-md-flex justify-content-center">
+          
+          <nz-card class="form-register-width py-md-4 px-2 bg-dark ">
+            <h3 nz-typography >Registro</h3>
+            <nz-divider></nz-divider>
+
+<!--
+            <nz-steps [nzCurrent]="current" nzProgressDot class="mx-1">
+
+              <nz-step nzTitle="Usuario"></nz-step>
+              <nz-step nzTitle="Perfil"></nz-step>
+              <nz-step nzTitle="Confirmar"></nz-step>
+            </nz-steps>
+          -->
+            <div class="mx-auto my-3">
+              <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()" autocomplete="off">
+                <app-user-form
+                *ngIf="current === 0"
+                [userForm]="getcurrentGroup()">
+              </app-user-form>
+              <!-- 
+              <app-profile-form
+              *ngIf="current === 1"
+              [profileForm]="getcurrentGroup()">
+            </app-profile-form>
+            -->
+              </form>
+            </div>
+            
+
+            <div class="steps-action">
+              <!-- 
+              <button nz-button nzType="default" (click)="pre()" *ngIf="current > 0">
+                <span>Anterior</span>
+              </button>
+              <button nz-button nzType="default" style="float: right;" (click)="next()" *ngIf="current < 2">
+                <span>Siguiente</span>
+              </button>
+-->
+              <button nz-button nzType="primary"  style="float: right;" (click)="done()" *ngIf="current === 0">
+                <span>REGISTRAR</span>
+              </button>
+            </div>
+          </nz-card>
+        
+        <nz-card style="background-color: #1d1d1b;" class="d-flex align-items-center justify-content-center">
+          <div class="text-wrap p-4 text-center d-flex align-items-center order-md-last">
+              <div class="text w-100">
+                <img src="../../../assets/logo.png" width="230px" alt="">
+                <p>¿No tienes una cuenta?</p>
+                <button nz-button nzType="dashed">REGISTRATE</button>
+  
+              </div>
+          </div>
+        </nz-card>
+        </div>
+      </div>
+    </div>
+  </div>

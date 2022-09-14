@@ -1,0 +1,205 @@
+    <div nz-form [formGroup]="userForm">
+      <div nz-row [nzGutter]="[16,0]">
+        <div nz-col nzXs="24">
+          <nz-form-item>
+          <nz-form-control [nzErrorTip]="userErrorTpl">
+            <nz-input-group [nzPrefix]="prefixTemplateUser">
+                <input type="text" nz-input formControlName="username"  placeholder="Nombre de usuario" autocomplete="off" minlength="3" maxlength="16" />
+                <ng-template #userErrorTpl let-control>
+                  <ng-container *ngIf="control.hasError('required')">Ingrese un usuario</ng-container>
+                  <ng-container *ngIf="control.hasError('minlength')">El usuario debe teener un minimo de 3 letras</ng-container>
+                  <ng-container *ngIf="control.hasError('maxlength')">El usuario debe teener un maximo de 16 letras</ng-container>
+                </ng-template>
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col nzXs="24" nzXl="12" >
+          <nz-form-item>
+            <nz-form-control [nzErrorTip]="passwordErrorTpl">
+            <nz-input-group [nzPrefix]="suffixTemplatePassword" >
+              <input type="password" nz-input placeholder="Contraseña" formControlName="password" autocomplete="off" (ngModelChange)="updateConfirmValidator()"  minlength="3" maxlength="16" />
+              <ng-template #passwordErrorTpl let-control>
+                <ng-container *ngIf="control.hasError('required')">Ingrese una contraseña</ng-container>
+                <ng-container *ngIf="control.hasError('minlength')">La contraseña debe tener un minimo de 3 letras</ng-container>
+                <ng-container *ngIf="control.hasError('maxlength')">La contraseña debe tener un maximo de 16 letras</ng-container>
+              </ng-template>
+
+            </nz-input-group>
+           </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col nzXs="24" nzXl="12">
+          <nz-form-item>
+            <nz-form-control [nzErrorTip]="passwordCheckErrorTpl">
+            <nz-input-group style="float: right;" [nzPrefix]="suffixTemplatePassword">
+              <input type="password" nz-input placeholder="Confirmar" formControlName="checkPassword" autocomplete="off" minlength="3" maxlength="16" />
+              <ng-template #passwordCheckErrorTpl let-control>
+                <ng-container *ngIf="control.hasError('required')">Ingrese una contraseña</ng-container>
+                <ng-container *ngIf="control.hasError('confirm')">Las contraseñas no coinciden</ng-container>
+              </ng-template>
+            </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col nzXs="24">
+          <nz-form-item>
+            <nz-form-control nzHasFeedback [nzErrorTip]="emailErrorTpl">
+              <nz-input-group [nzPrefix]="suffixTemplateMail">
+                <input nz-input formControlName="email" placeholder="Correo" type="email" />
+                <ng-template #emailErrorTpl let-control>
+                  <ng-container *ngIf="control.hasError('email')">El correo no es valido</ng-container>
+                  <ng-container *ngIf="control.hasError('required')">Ingrese un correo</ng-container>
+                </ng-template>
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+      </div>
+
+
+      <div nz-col nzXs="24" nzXl="12" >
+        <nz-form-item>
+          <nz-form-control [nzErrorTip]="nameErrorTpl">
+          <nz-input-group [nzPrefix]="prefixTemplateUser" >
+            <input type="text" nz-input placeholder="Nombre" formControlName="name" autocomplete="off" />
+            <ng-template #nameErrorTpl let-control>
+              <ng-container *ngIf="control.hasError('required')">Ingrese su nombre</ng-container>
+            </ng-template>
+
+          </nz-input-group>
+         </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzXs="24" nzXl="12">
+        <nz-form-item>
+          <nz-form-control [nzErrorTip]="lastNameCheckErrorTpl">
+          <nz-input-group style="float: right;" [nzPrefix]="prefixTemplateUser">
+            <input type="text" nz-input placeholder="Apellido" formControlName="lastName"/>
+            <ng-template #lastNameCheckErrorTpl let-control>
+              <ng-container *ngIf="control.hasError('required')">Ingrese su apellido</ng-container>
+            </ng-template>
+          </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzXs="24" nzXl="24">
+        <nz-form-item>
+          <nz-form-control [nzErrorTip]="RutCheckErrorTpl">
+          <nz-input-group style="float: right;" [nzPrefix]="prefixTemplateUser">
+            <input type="text" nz-input placeholder="Rut" formControlName="rut"/>
+            <ng-template #RutCheckErrorTpl let-control>
+              <ng-container *ngIf="control.hasError('required')">Ingrese su rut</ng-container>
+            </ng-template>
+          </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzXs="24" nzXl="24">
+        <nz-form-item>
+          <nz-form-control
+            [nzSm]="24"
+            [nzXs]="24"
+            [nzValidateStatus]="userForm.controls['phoneNumber']"
+            [nzErrorTip]="phoneCheckErrorTpl"
+          >
+            <nz-input-group [nzAddOnBefore]="addOnBeforeTemplate">
+              <ng-template #addOnBeforeTemplate>
+                <nz-select formControlName="phoneNumberPrefix" class="phone-select">
+                  <nz-option nzLabel="+56" nzValue="+56"></nz-option>
+                </nz-select>
+              </ng-template>
+              <input formControlName="phone" id="'phoneNumber'" nz-input />
+              <ng-template #phoneCheckErrorTpl let-control>
+                <ng-container *ngIf="control.hasError('required')">Seleccione su numero de telefono</ng-container>
+              </ng-template>
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      
+      <div nz-col nzXs="24" nzXl="24">
+        <nz-form-item>
+          <nz-form-control [nzErrorTip]="interestCheckErrorTpl">
+            <nz-select nzMode="multiple" nzPlaceHolder="Temas de Interes" [required]="true" formControlName="themesInterest">
+              <nz-option *ngFor="let option of listOfOption" [nzLabel]="option" [nzValue]="option" ></nz-option>
+            </nz-select>
+            <ng-template #interestCheckErrorTpl let-control>
+              <ng-container *ngIf="select?.invalid && (select?.dirty || select?.touched)">Seleccione por lo menos un tema de interes</ng-container>
+            </ng-template>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+            
+      <div nz-col nzXs="24" nzXl="24">
+        <nz-form-item>
+          <nz-form-control [nzErrorTip]="careerCheckErrorTpl">
+            <nz-select nzPlaceHolder="Carrera" nzShowSearch nzAllowClear formControlName="career">
+              <nz-option *ngFor="let option of listCareer" [nzLabel]="option" [nzValue]="option" ></nz-option>
+            </nz-select>
+            <ng-template #careerCheckErrorTpl let-control>
+              <ng-container *ngIf="control.hasError('required')">Seleccione una carrera</ng-container>
+            </ng-template>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzXs="24" nzXl="24">
+        <nz-form-item>
+            <nz-form-control [nzErrorTip]="semesterCheckErrorTpl">
+            <nz-input-group>
+              <input type="text" nz-input placeholder="Semestre en curso" formControlName="semesterProgress"/>
+              <ng-template #semesterCheckErrorTpl let-control>
+                <ng-container *ngIf="control.hasError('required')">Ingrese el año actual de carrera</ng-container>
+              </ng-template>
+            </nz-input-group>
+            </nz-form-control>
+        </nz-form-item>
+      </div>
+
+      <ng-template #prefixTemplatePhone>
+        <i nz-icon nzType="phone" nzTheme="outline"></i>
+         </ng-template>
+      <ng-template #prefixTemplateUser>
+        <i nz-icon nzType="user"></i>
+      </ng-template>
+      <ng-template #suffixTemplatePassword>
+        <i nz-icon nzType="lock" nzTheme="outline"></i>
+      </ng-template>
+      <ng-template #suffixTemplateMail>
+        <i nz-icon nzType="mail" nzTheme="outline"></i>
+      </ng-template>
+      </div>
+    </div>
+<!-- 
+<div nz-form [formGroup]="userForm">
+      <div nz-row [nzGutter]="[16, 24]">
+        <div nz-col [nzSpan]="24">
+          <nz-input-group nzXl="24" [nzSuffix]="suffixTemplateInfo" [nzPrefix]="prefixTemplateUser">
+            <input type="text" nz-input placeholder="Ingrese un usuario" />
+          </nz-input-group>
+        </div>
+
+
+        <nz-input-group nz-col nzXl="12"  [nzPrefix]="suffixTemplatePassword">
+          <input type="text" nz-input placeholder="Ingrese una contraseña" />
+        </nz-input-group>
+        <ng-template #prefixTemplateUser><i nz-icon nzType="user"></i></ng-template>
+        <ng-template #suffixTemplateInfo>
+          <i nz-icon nz-tooltip nzTooltipTitle="Extra information" nzType="info-circle"></i>
+        </ng-template>
+        <ng-template #suffixTemplatePassword>
+          <i nz-icon nzType="lock" nzTheme="outline"></i>
+        </ng-template>
+        <ng-template #suffixTemplateEmail>
+          <i nz-icon nzType="mail" nzTheme="outline"></i>
+        </ng-template>
+        <nz-input-group style="float: right;"  nz-col nzXl="12" [nzPrefix]="suffixTemplatePassword">
+          <input type="text" nz-input placeholder="Confirme la contraseña" />
+        </nz-input-group>
+        <nz-input-group nz-col nzXl="24" [nzPrefix]="suffixTemplateEmail">
+          <input type="text" nz-input placeholder="Ingrese un correo" />
+        </nz-input-group>
+      </div>
+
+    </div>
+
+    -->
