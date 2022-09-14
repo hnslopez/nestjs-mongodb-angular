@@ -1,0 +1,357 @@
+DB NEW
+
+--Rol dentro del Sistema inmutables
+	Usuario (Usuario Normal)
+	Administrador
+	
+--CREADOS
+--Usuario
+	_id:		objectId
+	Usuario:	String
+	Nombre:		String
+	Apellido:	String
+	Correo:		String
+	Contraseña:	String
+	Roles: 		[String], default: ['Usuario'] //Rol dentro del sistema
+	Sede:		{type:objectId, ref:'Sede'}
+	RolSede:	[{type:objectId, ref:'Rol'}]
+	EstadoUsuario:		String // Baneado, Espera, Normal
+	Foto:		String:Base64
+	Registro:	Date.now()
+	Verificado:	Boolean
+
+--CREADO
+--Sede:
+	_id:		objectId
+	Nombre:		String
+	Administrador:	{type:objectId, ref:'Usuario', default:null}
+	Credencial:	String, requerida
+	Estado:		String // ACTIVO - DESABILITADO - MANTENIMIENTO ||| Si esta DESABILITADO desabilita no se puede acceder a ninguna función
+	
+
+--Ruta
+	_id:		objectId
+	Nombre:		String
+	Ruta:		String
+	Metodo:		String
+	Estado:		Boolean
+	Sede:		{type:objectId, ref:'Sede'}
+
+
+--Actividad
+	_id:		objectId
+	Titulo:		String
+	//Imagen:	REVISAR
+	Descripcion:String
+	Tipo:		[{type:objectId, ref:'TipoActividad'}]
+	Registro:	Date.now()
+	Contenido:	String
+	Publicacion:Date
+	Autor:		{type:objectId, ref:'Usuario'}
+	Tag:		[String]
+	Estado:		Boolean
+	PermitirInscripcion: Boolean
+	Inscripcion: [{type:objectId, ref:'Inscripcion'}]
+
+--Inscripcion:
+	_id:	objectId
+	Usuario:		{type:objectId, ref:'Usuario'}
+	Actividad:		{type:objectId, ref:'Actividad'}
+	Registro:	Date.now()
+	attendance: Boolean
+
+
+--TipoActividad
+	_id:		objectId
+	Nombre:		String
+	Estado:		Boolean
+	Sede:		{type:objectId, ref:'Sede'}
+
+
+--CREADO
+--Rol
+	_id:		objectId
+	Nombre:		String
+	Estado:		Boolean
+	Sede:		{type:objectId, ref:'Sede'}
+	Permiso:	[{type:objectId, ref:'Permiso'}]
+
+--CREADO
+--Permiso
+	_id:		objectId
+	Ruta:		[String] [Por defecto las rutas disponiles]
+	Metodo:		[String] // GET -- POST -- UPDATE- PATCH
+	Nombre:		String //Ej: Permitir Editar cualquier usuario
+	Crear: 		[ENUM] // SI / N0
+	Leer:		[ENUM] // SI / N0
+	Actualizar:	[ENUM] // SI / N0 / PROPIO / TODOS
+	Eliminar:	[ENUM] // SI / N0 / PROPIO / TODOS
+	Sede:		{type:objectId, ref:'Sede'}
+
+--RegistroAuditoria
+	_id:	objectId
+	Usuario:	{type:objectId, ref:'Usuario'}
+	Accion:		[String] //Eliminar, Creo, Añadir, Editar
+	Comentario:	String //Añadio Rol a Usuario 
+	Registro:		Date.now()
+	Sede:		{type:objectId, ref:'Sede'}
+
+
+------------------------------------------------------------------
+
+
+
+
+DB OLD
+	[___________________________________________________________]
+--User
+		_id:		objectId
+		name:		String
+		lastname:	String
+		email:		String
+		createdAt:	Date.now()
+		password:	String
+		roles:		[String]
+		branch:		{type:objectId, ref:'Branch'}
+		userRole:	{type:String}
+		status:		{type:objectId, ref:'Status'}
+		post:		[{type:objectId, ref:'Event'}]
+		notification:[{type:objectId, ref:'Notification'}]	
+		
+	[___________________________________________________________]
+		
+	--Branch
+		_id:		objectId
+		name:		String
+		address:	{type:objectId, ref:'Address'}
+		owner:		{type:objectId, ref:'User'}
+	[___________________________________________________________]
+	
+	
+	--routes
+		_id:		objectId
+		nameRoute:	String
+		status:		String
+		branch:		{type:objectId, ref:'Branch'}
+		
+	[___________________________________________________________]
+	
+	--Address
+		_id:		objectId
+		number:		String
+		street:		String
+		comuna:		String
+		region:		String
+	[___________________________________________________________]
+	
+	--Event
+		_id:		objectId
+		title:		String
+		image:		String (URL)
+		description:String
+		type:		[{type:objectId, ref:'TypeEvent'}]
+		createdAt:	Date.now()
+		content:	String
+		postAt:		Date
+		inscription:[{type:objectId, ref:'Inscription'}]
+		author:		{type:objectId, ref:'User'}
+		post:		Date
+		tags:		String
+		status:		Boolean
+		inscriptionsEnable: Boolean
+		publicNow:  Boolean
+		
+	
+	--Inscription
+		_id:		objectId
+		user:		{type:objectId, ref:'User'}
+		event:		{type:objectId, ref:'Event'}
+		createdAt:	Date.now()
+		attendance: Boolean
+		
+	
+	Agreement
+		_id:		objectId
+        name:		String
+        description:String
+        createdAt:	Date  
+        status:		String
+        enterprise: {type:ObjectId, ref:'Enterprise' ,required:true},
+        history:	[{ type:ObjectId, ref:'HistoryAgreement'}]		
+	
+	history
+		_id:		objectId
+		agreement:	{type:objectId, ref:'Agreement'}
+		name:		String
+		description:String
+		createdAt:	Date
+	
+	Enterprise
+		_id:		objectId
+		name:		String
+		address:	{type:objectId, ref:'Address'}	
+		agreement:	[{type:objectId, ref:'Agreement'}]
+		contacts:	[{type:objectId, ref:'Contacts'}]
+		status:		Number
+		
+
+	Contacts
+		_id:		objectId
+		name:		String
+		last_name:	String
+		email:		String
+		phone:		String
+		status:		Boolean
+		principal:	Boolean
+		
+	Guest
+		_id:		objectId
+		name:		String
+		last_name:	String
+		email:		String
+		phone:		String
+		attendance:	Boolean
+		post:		{type:objectId, ref:'Event'}
+		createdAt:	Date
+		
+	TypeEvent
+		name:		String
+		description: String
+		status:		Boolean
+		
+	UserTypeEvent
+		User:		{ type:objectId, ref:'Event'}
+		EventType   { type:ObjectId, ref:'TypeEvent'}
+	
+	notification:
+		_id:		objectId
+		event:		{type:objectId, ref:'Event'}	
+		author:		{type:objectId, ref:'User'}		
+		createdAt:	Date
+		attendance:	Boolean
+		
+	
+	UserNotification
+	    user: 		{ type:ObjectId, ref:'User'},
+		notification:{ type:ObjectId, ref:"Notification"},
+		readAt:		Date 
+		isRead:		Boolean
+	
+	Project
+		_id:		objectId
+		title:		String
+		description:String
+		createdAt:	Date,	default: Date.now()
+		history:	[{ type:ObjectId, ref:'ProjectHistory'}],
+		status:		String, default:'Nuevo'
+		author:		{ type:ObjectId, ref:'User'},
+		branch:		{ type:ObjectId, ref:'Branch'},
+	
+	
+	ProjectHistory
+		_id:		objectId
+		title:		String
+		description:String
+		createdAt:	Date   
+		project:	{type:mongoose.Types.ObjectId, ref:'Project'}
+		
+	audit_log
+		_id:		objectId
+		error:		String
+		createdAt:	Date.now()
+
+
+
+--------------------------------------------------------------------
+
+--IDEAS
+
+FRAMEWORKS/MODULOS
+	Compodoc (crea documentación)
+	Nestjs (backend)
+	MongoDB (DB)
+	Angular(Frontend)
+	-- ng-zorro
+
+-BACKEND
+	perfil completo del usuario con ingreso de fotos.
+	roles nivel de sistema (accesos exclusivos a sistemas) y simples (roles normales que puede crear el usador de baas)
+	patch exclusivo cambio de password
+	notas de parche 
+	backup cada 24 horas
+	crear rol administrador por defecto con usuario autogenerado y password, requiriendo correo real
+	crear permisos por defecto
+	ruta de mantenimiento con solo un login, una vez logeado si es admin o tiene permiso de mantenimiento puede ingresar
+	administrar rutas bloqueadas
+	cors: almacenar en db//variable global las paginas que pueden ingresar al api
+	tomar numero de telefono de los alumnos y colocarlos en una table y validar que estan en el grupo de
+	whatapp con un ticket de validado.
+	ruta de temas de interes.
+	poder cerrar sesiones desde un apartado de admin.
+	
+	poder tener 3 sesiónes al mismo tiempo (hash permitir)
+	
+	
+-FRONTEND
+	pestaña exclusiva cambio de contraseña --  actual /nueva /repetir nueva
+	modo oscuro // opcional
+	Para administradores: notas de parche / funcionalidades 
+	
+
+
+
+
+FIN DE SEMANA--
+Crear el doble navbar funcional.
+Login funcional
+
+
+
+
+
+
+
+
+
+
+
+----
+inscripcion de ramos para el citt
+	el estudiante escanea el qr en la puerta
+	ese qr manda a un formulario que debe llenar la persona
+	se registra la persona en el citt, se ingresa a un grupo  de whatapp
+	
+
+talleres del citt
+	cualquier alumno o profesor y poder crear un taller (cualquiera), una vez creado se avisa al grupo
+	luego las personas que van pueden ir (no hay registro de asistencia)
+	cuando se terminar el taller se crea un registro con fotos
+
+convenios
+	los profesores tienen contactos con otras empresas para tener convios con el citt.
+	el citt en si no tiene convenios con empresas.
+
+
+
+
+
+
+
+
+
+Se coloca el nombre completo de la actividad (Por ej. "Realizar levantamiento de información", "Elaborar Diseño Técnico", "Desarrollar Componente Java 001").
+
+sameSite, investigar (?
+
+
+
+
+//---ejemplo
+https://enlink.themenate.net/apps/file-manager
+
+
+
+//--ACUALIZAR SISTEMA DE LOGIN PARA QUE TOME NAVEGADOR Y DISPOSITIVO
+
+auditoria usuario no borrando el registro
+

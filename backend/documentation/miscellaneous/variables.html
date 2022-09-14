@@ -1,0 +1,552 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>backend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">backend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content miscellaneous-variables">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Miscellaneous</li>
+  <li>Variables</li>
+</ol>
+
+<section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <ul class="index-list">
+                        <li>
+                            <a href="#Branch" title="src/common/decorators/branch.decorator.ts" ><b>Branch</b>&nbsp;&nbsp;&nbsp;(src/.../branch.decorator.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#BranchSchema" title="src/branch/schemas/branch.schema.ts" ><b>BranchSchema</b>&nbsp;&nbsp;&nbsp;(src/.../branch.schema.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#crypto" title="src/common/helper/hash.helper.ts" ><b>crypto</b>&nbsp;&nbsp;&nbsp;(src/.../hash.helper.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#HashSchema" title="src/users/schemas/hash.schema.ts" ><b>HashSchema</b>&nbsp;&nbsp;&nbsp;(src/.../hash.schema.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#MongoStore" title="src/main.ts" ><b>MongoStore</b>&nbsp;&nbsp;&nbsp;(src/.../main.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#PermissionSchema" title="src/permission/schemas/permission.schema.ts" ><b>PermissionSchema</b>&nbsp;&nbsp;&nbsp;(src/.../permission.schema.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#ProfileSchema" title="src/users/schemas/profile.schema.ts" ><b>ProfileSchema</b>&nbsp;&nbsp;&nbsp;(src/.../profile.schema.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#Public" title="src/common/decorators/public.decorator.ts" ><b>Public</b>&nbsp;&nbsp;&nbsp;(src/.../public.decorator.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#roles" title="src/app.roles.ts" ><b>roles</b>&nbsp;&nbsp;&nbsp;(src/.../app.roles.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#RolesSchema" title="src/roles/schemas/roles.schema.ts" ><b>RolesSchema</b>&nbsp;&nbsp;&nbsp;(src/.../roles.schema.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#RouterSchema" title="src/router/schemas/router.schema.ts" ><b>RouterSchema</b>&nbsp;&nbsp;&nbsp;(src/.../router.schema.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#User" title="src/common/decorators/user.decorator.ts" ><b>User</b>&nbsp;&nbsp;&nbsp;(src/.../user.decorator.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#UserSchema" title="src/users/schemas/user.schema.ts" ><b>UserSchema</b>&nbsp;&nbsp;&nbsp;(src/.../user.schema.ts)</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <h3>src/common/decorators/branch.decorator.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Branch"></a>
+                    <span class="name">
+                        <span ><b>Branch</b></span>
+                        <a href="#Branch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createParamDecorator(
+    (data:string, ctx: ExecutionContext) &#x3D;&gt; {
+        const request &#x3D; ctx.switchToHttp().getRequest();
+        const branch &#x3D; request.headers.code;     
+        if (branch &#x3D;&#x3D;&#x27;62a90153efa940f40780e438&#x27;) return {};
+        return {branch};
+    }
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/branch/schemas/branch.schema.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="BranchSchema"></a>
+                    <span class="name">
+                        <span ><b>BranchSchema</b></span>
+                        <a href="#BranchSchema"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Schema({
+    name:{type:String, require},
+    user:{ type: mongoose.Types.ObjectId, ref:&#x27;User&#x27; },
+    token:{type:String, required:true },
+    createdAt: { type: Date, default: Date.now },
+    status: {type:String, enum:EstatusBranch, required: true, default: EstatusBranch.ACTIVE}
+})</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/common/helper/hash.helper.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="crypto"></a>
+                    <span class="name">
+                        <span ><b>crypto</b></span>
+                        <a href="#crypto"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>require(&#x27;crypto&#x27;)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/users/schemas/hash.schema.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="HashSchema"></a>
+                    <span class="name">
+                        <span ><b>HashSchema</b></span>
+                        <a href="#HashSchema"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Schema({
+    user:{ type: mongoose.Types.ObjectId, ref:&#x27;User&#x27; },
+    updatedAt: { type: Date, default: Date.now },
+    hashRefreshToken: {type:String, required: true}
+})</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/main.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="MongoStore"></a>
+                    <span class="name">
+                        <span ><b>MongoStore</b></span>
+                        <a href="#MongoStore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>require(&#x27;connect-mongo&#x27;)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/permission/schemas/permission.schema.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="PermissionSchema"></a>
+                    <span class="name">
+                        <span ><b>PermissionSchema</b></span>
+                        <a href="#PermissionSchema"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Schema({
+    router:{ type:String}, //TODO: ENUM ROUTER LIST
+    method:{ type:String, enum:EMethod, required:true},
+    name:{ type:String, required:true },
+    pCreate : {type:String, enum:ECrud, default:ECrud.NO},
+    pRead:   { type:String, enum:ECrud, default:ECrud.NO},
+    pUpdate: { type:String, enum:ECrud, default:ECrud.NO},
+    pDelete: { type:String, enum:ECrud, default:ECrud.NO},
+    branch: { type:mongoose.Types.ObjectId, ref:&#x27;Branch&#x27;, required:true}
+})</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/users/schemas/profile.schema.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ProfileSchema"></a>
+                    <span class="name">
+                        <span ><b>ProfileSchema</b></span>
+                        <a href="#ProfileSchema"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Schema({
+   // user: { type: mongoose.Types.ObjectId, ref:&#x27;User&#x27;, required:true },
+    name: { type: String, required: true },
+    lastName: { type: String, required: true },
+    roles: { type: [String], required: true, enum: AppRoles, default: AppRoles.USER },
+    branch:    {type:mongoose.Types.ObjectId, ref:&#x27;Branch&#x27;, required:true},
+    //revisar
+    rolesBranch:   [{type:mongoose.Types.ObjectId, ref:&#x27;Roles&#x27;, required:true}],
+    rut:{type:String, required:true},
+    status: { type: String, enum: statusUser, default: statusUser.WAITING },
+    picture:{ type:String},
+    email: { type: String, required: true },
+    phone:{ type:String, required: true},
+    career:{ type:String, required:true},
+    themesInterest: {type:[String], required:true},
+    semesterProgress:{type:Number, min:1, max:8, required:true},
+    lastLogin: {type: Date, default:Date.now, required:true}
+
+})</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/common/decorators/public.decorator.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Public"></a>
+                    <span class="name">
+                        <span ><b>Public</b></span>
+                        <a href="#Public"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>() &#x3D;&gt; SetMetadata(&#x27;isPublic&#x27;,true)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app.roles.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="roles"></a>
+                    <span class="name">
+                        <span ><b>roles</b></span>
+                        <a href="#roles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>RolesBuilder</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new RolesBuilder()</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/roles/schemas/roles.schema.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="RolesSchema"></a>
+                    <span class="name">
+                        <span ><b>RolesSchema</b></span>
+                        <a href="#RolesSchema"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Schema({
+    name:{ type:String, required:true},
+    status:{ type:String, enum:ERoles, default: ERoles.ACTIVE},
+    branch: { type:mongoose.Types.ObjectId, ref:&#x27;Branch&#x27;, required:true},
+    permission:[{type:mongoose.Types.ObjectId, ref:&#x27;Permission&#x27;}]
+})</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/router/schemas/router.schema.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="RouterSchema"></a>
+                    <span class="name">
+                        <span ><b>RouterSchema</b></span>
+                        <a href="#RouterSchema"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Schema({
+    router: { type:String, required:true},
+    method: { type:String, required:true},
+    status:{ type:Boolean, required:true, default:true},
+    branch:{ type:mongoose.Types.ObjectId, ref:&#x27;Branch&#x27;},
+
+    
+})</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/common/decorators/user.decorator.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="User"></a>
+                    <span class="name">
+                        <span ><b>User</b></span>
+                        <a href="#User"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>createParamDecorator(
+    (data:string, ctx: ExecutionContext) &#x3D;&gt; {
+        const request &#x3D; ctx.switchToHttp().getRequest();
+        const user &#x3D; request.user;
+
+        return data ? user &amp;&amp; user[data] : user;
+    }
+)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/users/schemas/user.schema.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="UserSchema"></a>
+                    <span class="name">
+                        <span ><b>UserSchema</b></span>
+                        <a href="#UserSchema"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Schema({
+    username: { type: String, required: true },
+    profile:{type: mongoose.Types.ObjectId, ref:&#x27;Profile&#x27;},
+    hash:{type: mongoose.Types.ObjectId, ref:&#x27;Hash&#x27;},
+    password: { type: String, required: true, select: false },
+    createdAt: { type: Date, default: Date.now },
+    verified: { type: Boolean, default: false },
+}).pre(&quot;save&quot;, async function (next) {
+
+    if (!this.isModified(&#x27;password&#x27;)) return next();
+    this.password &#x3D; await HashHelper.encrypt(this.password);
+
+    return next();
+
+})</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
+            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
