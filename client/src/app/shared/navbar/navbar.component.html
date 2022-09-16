@@ -1,16 +1,15 @@
 <div class="app-header">
-    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }" *ngIf="isLoggedIn$ | async; else loginNow">
-      <div nz-col nzSpan="12">
-        <!-- 
+    <div *ngIf="isLoggedIn$ | async; else loginNow">
+       <!--    <div nz-col nzSpan="12" class="gutter-row" >
+    
         <span class="header-trigger" (click)="changeCollapse(!isCollapsed)">
           <i class="trigger"
              nz-icon
              [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
           ></i>
       </span>
--->
-      </div>
-      <div nz-col nzSpan="12" style="text-align: right;">
+     </div>
+      <div nz-col nzSpan="12"  class="gutter-row"  style="text-align: right; padding-right: 8px;">
         <a nz-dropdown [nzDropdownMenu]="menu" nzTrigger="click" nzPlacement="bottomRight">
           <nz-avatar nzSize="large" nzIcon="user"></nz-avatar> 
         </a>
@@ -25,29 +24,31 @@
             </li>
           </ul>
         </nz-dropdown-menu>
-      </div>
+      </div>      
+--> 
+<ul nz-menu nzSelectable  nzMode="horizontal">
+  <li nz-menu-item >
+    <a [routerLink]="['/']">HOME</a>
+  </li>
+    <li nz-menu-item class="nav-right">
+      <a [routerLink]="['/', 'logout']">CERRAR SESIÓN</a>
+    </li>
+    <li class="nav-right">
+      NOMBRE
+    </li>
+  </ul>    
+
     </div>
     //TODO: CREAR MENU PARA LOGIN Y REGISTRO
     <ng-template #loginNow>
-        <div nz-col nzSpan="12">
-        </div>
-        <div nz-col nzSpan="12" style="text-align: right;">
-          <ul nz-menu nzMode="horizontal">
-            <li nz-menu-item >
-              <span nz-icon nzType="mail"></span>
-              Navigation One
-            </li>
-            <li nz-menu-item >
-              <span nz-icon nzType="mail"></span>
-              Navigation One
-            </li>
-            <li nz-menu-item >
-              <span nz-icon nzType="mail"></span>
-              Navigation One
-            </li>
-          </ul>
-        </div>
-
+      <ul nz-menu nzSelectable  nzMode="horizontal">
+        <li nz-menu-item >
+          <a [routerLink]="['/']">HOME</a>
+        </li>
+          <li nz-menu-item class="nav-right">
+            <a [routerLink]="['/', 'login']">INICIAR SESIÓN</a>
+          </li>
+        </ul>    
     </ng-template>
    
   </div>
