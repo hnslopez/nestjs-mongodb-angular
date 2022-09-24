@@ -21,12 +21,15 @@
   </nz-layout>
 </nz-layout>
 -->
-<nz-layout>
+<nz-layout class=" px-0 h-100">
   <nz-header>
     <app-navbar [isCollapsed]="isCollapsed" (collapse)="updateCollapse($event)"></app-navbar>
 </nz-header>
-<router-outlet></router-outlet>   
 
+
+<nz-content>
+  <router-outlet></router-outlet>
+</nz-content>
 
   <nz-footer>Footer</nz-footer>
 </nz-layout>

@@ -1,5 +1,4 @@
-<div class="app-header">
-    <div *ngIf="isLoggedIn$ | async; else loginNow">
+<div *ngIf="isLoggedIn$ | async; else loginNow">
        <!--    <div nz-col nzSpan="12" class="gutter-row" >
     
         <span class="header-trigger" (click)="changeCollapse(!isCollapsed)">
@@ -39,9 +38,8 @@
   </ul>    
 
     </div>
-    //TODO: CREAR MENU PARA LOGIN Y REGISTRO
     <ng-template #loginNow>
-      <ul nz-menu nzSelectable  nzMode="horizontal">
+      <ul nz-menu nzMode="horizontal" class="header-menu">
         <li nz-menu-item >
           <a [routerLink]="['/']">HOME</a>
         </li>
@@ -51,4 +49,3 @@
         </ul>    
     </ng-template>
    
-  </div>
