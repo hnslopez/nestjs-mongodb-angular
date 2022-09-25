@@ -1,4 +1,4 @@
-<div *ngIf="isLoggedIn$ | async; else loginNow">
+<div *ngIf="userData$ | async as user; else loginNow">
        <!--    <div nz-col nzSpan="12" class="gutter-row" >
     
         <span class="header-trigger" (click)="changeCollapse(!isCollapsed)">
@@ -25,27 +25,27 @@
         </nz-dropdown-menu>
       </div>      
 --> 
-<ul nz-menu nzSelectable  nzMode="horizontal">
-  <li nz-menu-item >
-    <a [routerLink]="['/']">HOME</a>
+<ul nz-menu nzSelectable  nzMode="horizontal" class="header-menu">
+  <li nz-menu-item *ngFor="let item of menuAuth" [ngClass]="{ 'nav-right': item.right}" >
+    <a [routerLink]="item.link">{{item.name}}</a>
   </li>
+
     <li nz-menu-item class="nav-right">
-      <a [routerLink]="['/', 'logout']">CERRAR SESIÓN</a>
+      <a (click)="logout()">CERRAR SESIÓN</a>
     </li>
     <li class="nav-right">
-      NOMBRE
+      {{user.name[0] | uppercase}}. {{user.lastName | uppercase }}
     </li>
+
+
   </ul>    
 
     </div>
     <ng-template #loginNow>
-      <ul nz-menu nzMode="horizontal" class="header-menu">
-        <li nz-menu-item >
-          <a [routerLink]="['/']">HOME</a>
+      <ul nz-menu nzMode="horizontal" class="header-menu" >
+        <li nz-menu-item *ngFor="let item of menu" [ngClass]="{ 'nav-right': item?.right}" >
+          <a [routerLink]="item.link">{{item.name}}</a>
         </li>
-          <li nz-menu-item class="nav-right">
-            <a [routerLink]="['/', 'login']">INICIAR SESIÓN</a>
-          </li>
-        </ul>    
+      </ul>    
     </ng-template>
    

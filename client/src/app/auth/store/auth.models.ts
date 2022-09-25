@@ -15,7 +15,8 @@ export interface AuthState {
 }
 
 export interface AuthUser {
-  id: number;
-  firstName: string;
-  lastName: string;
+  readonly name:string;
+  readonly lastName:string;
+  readonly status: string;
+  readonly email:string;
 }

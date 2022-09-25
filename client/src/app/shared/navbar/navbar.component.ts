@@ -8,7 +8,17 @@ import { AuthFacade } from 'src/app/auth/store/auth.facade';
 })
 export class NavbarComponent implements OnInit {
 
-  isLoggedIn$ = this.authFacade.isLoggedIn$
+  userData$ = this.authFacade.user$;
+
+  readonly menu = [
+    {link:'/', name:'HOME', right:false},
+    {link:'/login',name:'INICIAR SESIÓN', right:true},
+  ];
+
+  readonly menuAuth = [
+    {link:'/', name:'HOME', right:false},
+  ];
+
 
   @Input()
   isCollapsed?: boolean;
@@ -18,6 +28,10 @@ export class NavbarComponent implements OnInit {
 
   changeCollapse(value: boolean) {
     this.collapse.emit(value);
+  }
+
+  logout(){
+    this.authFacade.logout();
   }
   
   constructor(private authFacade: AuthFacade) { }

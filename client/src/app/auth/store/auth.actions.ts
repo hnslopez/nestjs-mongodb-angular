@@ -16,7 +16,7 @@ export const loginFailure = createAction(
 // Logout
 export const logout = createAction('[Auth] Logout');
 
-// Auth User: me
+// Auth
 export const getAuthUserRequest = createAction('[Auth] Auth User Request');
 export const getAuthUserSuccess = createAction(
   '[Auth] Auth User Success',
