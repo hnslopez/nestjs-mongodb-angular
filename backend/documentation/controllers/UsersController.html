@@ -96,17 +96,8 @@
                                 <a href="#findAll" >findAll</a>
                             </li>
                             <li>
-                                <a href="#findOne" >findOne</a>
-                            </li>
-                            <li>
                                     <span class="modifier">Async</span>
                                 <a href="#profile" >profile</a>
-                            </li>
-                            <li>
-                                <a href="#remove" >remove</a>
-                            </li>
-                            <li>
-                                <a href="#update" >update</a>
                             </li>
                         </ul>
                     </td>
@@ -140,7 +131,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>create(res, createUserDto: <a href="../classes/CreateUserDto.html" target="_self">CreateUserDto</a>)</code>
+                    <code>create(res, createUserDto: <a href="../classes/CreateUserDto.html" target="_self">CreateUserDto</a>, id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
@@ -148,14 +139,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@UseGuards(JwtNoAuthGuard)<br />@Post(&#x27;create&#x27;)<br /></code>
+                    <code>@UseGuards(JwtNoAuthGuard, RouterGuard)<br />@Post(&#x27;create&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="16"
-                            class="link-to-prism">src/users/users.controller.ts:16</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="18"
+                            class="link-to-prism">src/users/users.controller.ts:18</a></div>
                 </td>
             </tr>
 
@@ -190,6 +181,18 @@
                                     <td>createUserDto</td>
                                     <td>
                                                 <code><a href="../classes/CreateUserDto.html" target="_self" >CreateUserDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
 
                                     <td>
@@ -243,8 +246,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">src/users/users.controller.ts:48</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/users/users.controller.ts:46</a></div>
                 </td>
             </tr>
 
@@ -318,7 +321,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>findAll(res)</code>
+                    <code>findAll(res, branch: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
@@ -332,80 +335,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/users/users.controller.ts:32</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>res</td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="findOne"></a>
-                    <span class="name">
-                        <span ><b>findOne</b></span>
-                        <a href="#findOne"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>findOne(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <b>Decorators : </b>
-                    <br />
-                    <code>@Get(&#x27;:id&#x27;)<br /></code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="56"
-                            class="link-to-prism">src/users/users.controller.ts:56</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/users/users.controller.ts:34</a></div>
                 </td>
             </tr>
 
@@ -426,7 +357,18 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>id</td>
+                                    <td>res</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>branch</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -443,7 +385,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>    <code>unknown</code>
 
                     </div>
                     <div class="io-description">
@@ -482,8 +424,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">src/users/users.controller.ts:39</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/users/users.controller.ts:41</a></div>
                 </td>
             </tr>
 
@@ -542,242 +484,60 @@
             </tr>
         </tbody>
     </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="remove"></a>
-                    <span class="name">
-                        <span ><b>remove</b></span>
-                        <a href="#remove"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>remove(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <b>Decorators : </b>
-                    <br />
-                    <code>@Delete(&#x27;:id&#x27;)<br /></code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="66"
-                            class="link-to-prism">src/users/users.controller.ts:66</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>id</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="update"></a>
-                    <span class="name">
-                        <span ><b>update</b></span>
-                        <a href="#update"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>update(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, updateUserDto: <a href="../classes/UpdateUserDto.html" target="_self">UpdateUserDto</a>)</code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <b>Decorators : </b>
-                    <br />
-                    <code>@Patch(&#x27;:id&#x27;)<br /></code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="61"
-                            class="link-to-prism">src/users/users.controller.ts:61</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>id</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>updateUserDto</td>
-                                    <td>
-                                                <code><a href="../classes/UpdateUserDto.html" target="_self" >UpdateUserDto</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
 </section>    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Get, Post, Body, Patch, Param, Delete, Res, BadRequestException, HttpStatus, UseGuards } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Get, Post, Body, Patch, Param, Delete, Res, BadRequestException, HttpStatus, UseGuards, Req } from &#x27;@nestjs/common&#x27;;
 import { UsersService } from &#x27;./users.service&#x27;;
 import { CreateUserDto } from &#x27;./dto/create-user.dto&#x27;;
 import { UpdateUserDto } from &#x27;./dto/update-user.dto&#x27;;
-import { JWTSession, User } from &#x27;src/common/decorators&#x27;; 
+import { JWTSession, User } from &#x27;src/common/decorators&#x27;;
 import { IUser } from &#x27;./interface/user.interface&#x27;;
 import { JwtNoAuthGuard } from &#x27;src/auth/guards/jwt-no-auth.guard&#x27;;
 import { FilterUserDto } from &#x27;./dto/filter-user.dto&#x27;;
+import { RouterGuard } from &#x27;src/auth/guards/router.guard&#x27;;
+import { Branch } from &#x27;src/common/decorators/branch.decorator&#x27;;
 
 @Controller(&#x27;users&#x27;)
 export class UsersController {
-  constructor(private readonly usersService: UsersService) {}
+  constructor(private readonly usersService: UsersService) { }
 
-  @UseGuards(JwtNoAuthGuard)
+  @UseGuards(JwtNoAuthGuard, RouterGuard)
   @Post(&#x27;create&#x27;)
-  async create(@Res() res,@Body() createUserDto: CreateUserDto) {
+  async create(@Res() res, @Body() createUserDto: CreateUserDto, @Branch() id: string) {
     const mail &#x3D; await this.usersService.getUserByEmail(createUserDto.email);
-    if(mail) throw new BadRequestException(&#x27;Correo no disponible&#x27;)
-    
-    const username &#x3D; await this.usersService.getUserByEmail(createUserDto.username);
-    if(username) throw new BadRequestException(&#x27;Nombre de usuario no disponible&#x27;)
+    if (mail) throw new BadRequestException(&#x27;Correo no disponible&#x27;)
 
-    await this.usersService.create(createUserDto);
+    const username &#x3D; await this.usersService.getUserByEmail(createUserDto.username);
+    if (username) throw new BadRequestException(&#x27;Nombre de usuario no disponible&#x27;)
+
+    await this.usersService.create(createUserDto, id);
 
     return res.status(HttpStatus.OK).json({
-      message:&#x27;Usuario Creado, se enviara un correo cuando se habilite su cuenta&#x27;
+      message: &#x27;Usuario Creado, se enviara un correo cuando se habilite su cuenta&#x27;
     })
   }
 
   @JWTSession()
   @Get()
-  async findAll(@Res() res) {
-    const users &#x3D; await this.usersService.findAll();
-      return res.status(HttpStatus.OK).json(users);
+  async findAll(@Res() res, @Branch() branch: string) {
+    const users &#x3D; await this.usersService.findAll(branch);
+    return res.status(HttpStatus.OK).json(users);
   }
 
   @JWTSession()
   @Get(&#x27;profile&#x27;)
-  async profile(@Res() res, @User() user:IUser) {
-    const users &#x3D; await this.usersService.getUserByUsername(user.username);
-    //TODO: MOSTRAR PERFIL Y NO LA PASSWORD HASHEADA
-    console.log(user)
-    //return this.usersService.findAll();
-      return res.status(HttpStatus.OK).json( [])
+  async profile(@Res() res, @User() user: IUser) {
+    return res.status(HttpStatus.OK).json(user.profile)
   }
 
   @Post(&#x27;filter/user&#x27;)
-  async filterUser(@Res() res, @Body() filterUserDto: FilterUserDto){
+  async filterUser(@Res() res, @Body() filterUserDto: FilterUserDto) {
     const available &#x3D; await this.usersService.getUserbyUsernameFilter(filterUserDto.filter);
     return res.status(HttpStatus.OK).json(available);
   }
 
-
-
-  @Get(&#x27;:id&#x27;)
-  findOne(@Param(&#x27;id&#x27;) id: string) {
-    return this.usersService.findOne(+id);
-  }
-
-  @Patch(&#x27;:id&#x27;)
-  update(@Param(&#x27;id&#x27;) id: string, @Body() updateUserDto: UpdateUserDto) {
-    return this.usersService.update(+id, updateUserDto);
-  }
-
-  @Delete(&#x27;:id&#x27;)
-  remove(@Param(&#x27;id&#x27;) id: string) {
-    return this.usersService.remove(+id);
-  }
 }
 </code></pre>
     </div>

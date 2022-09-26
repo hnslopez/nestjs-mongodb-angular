@@ -2,3 +2,6 @@
   position: relative!important;float: right!important;
 }
 
+.ant-menu-horizontal{
+  border-bottom: 0;
+}

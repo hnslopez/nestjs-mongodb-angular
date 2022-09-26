@@ -12,12 +12,9 @@ export class NavbarComponent implements OnInit {
 
   readonly menu = [
     {link:'/', name:'HOME', right:false},
-    {link:'/login',name:'INICIAR SESIÓN', right:true},
+    {link:'/about', name:'PROYECTO', right:false}
   ];
 
-  readonly menuAuth = [
-    {link:'/', name:'HOME', right:false},
-  ];
 
 
   @Input()

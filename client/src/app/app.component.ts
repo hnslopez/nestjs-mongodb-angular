@@ -18,8 +18,7 @@ export class AppComponent implements OnInit {
     this.updateNbWidth(size);
 
     //title
-        this.router.events
-      .pipe(
+        this.router.events.pipe(
         filter((event) => event instanceof NavigationEnd),
         map(() => {
           let route: ActivatedRoute = this.router.routerState.root;
@@ -32,10 +31,9 @@ export class AppComponent implements OnInit {
           }
           return routeTitle;
         })
-      )
-      .subscribe((title: string) => {
+      ).subscribe((title: string) => {
         if (title) {
-          this.titleService.setTitle(`CITT - ${title}`);
+          this.titleService.setTitle(`DEMO - ${title}`);
         }
       });
   }

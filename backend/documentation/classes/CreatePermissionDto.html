@@ -70,8 +70,198 @@
 
 
 
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#enable" >enable</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#method" >method</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#name" >name</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#router" >router</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="enable"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                        <span ><b>enable</b></span>
+                        <a href="#enable"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" target="_blank" >Boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @IsBoolean({message: &#x27;El estado debe ser un booleano&#x27;})<br />@IsNotEmpty({message: &#x27;El estado no debe estar vacio.&#x27;})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/permission/dto/create-permission.dto.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="method"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                        <span ><b>method</b></span>
+                        <a href="#method"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#EMethod" target="_self" >EMethod</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @IsEnum(EMethod, {message: &#x27;Debe ingresar un metodo valido: GET, POST, PATCH, DELETE&#x27;})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/permission/dto/create-permission.dto.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="name"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                        <span ><b>name</b></span>
+                        <a href="#name"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @IsString({message: &#x27;El nombre debe ser un texto.&#x27;})<br />@IsNotEmpty({message: &#x27;El nombre no debe estar vacio.&#x27;})<br />@MinLength(3, {message: &#x27;El nombre debe contener $constraint1 o mas letras.&#x27;})<br />@MaxLength(48, {message: &#x27;El nombre debe contener un maximo de $constraint1 letras.&#x27;})<br />@Transform( &#x3D;&gt; )<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/permission/dto/create-permission.dto.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="router"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                        <span ><b>router</b></span>
+                        <a href="#router"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @IsString({message: &#x27;Ingrese un una ruta.&#x27;})<br />@IsNotEmpty({message: &#x27;La ruta no debe estar vacia.&#x27;})<br />@Transform( &#x3D;&gt; )<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/permission/dto/create-permission.dto.ts:12</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
 
 
 
@@ -83,7 +273,37 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export class CreatePermissionDto {}
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Transform } from &quot;class-transformer&quot;;
+import { IsBoolean, IsEnum, IsNotEmpty, IsOptional, IsString, MaxLength, MinLength } from &quot;class-validator&quot;;
+import { ECrud } from &quot;src/common/enum/crud.enum&quot;;
+import { EMethod } from &quot;src/common/enum/method.enum&quot;;
+import { sanitizeHelper } from &quot;src/common/helper&quot;;
+
+export class CreatePermissionDto {
+
+    @IsString({ message: &#x27;Ingrese un una ruta.&#x27; })
+    @IsNotEmpty({ message: &#x27;La ruta no debe estar vacia.&#x27; })
+    @Transform(({ value }) &#x3D;&gt; sanitizeHelper.satonizeALL(value))
+    readonly router:string;
+
+    @IsEnum(EMethod,{message:&#x27;Debe ingresar un metodo valido: GET, POST, PATCH, DELETE&#x27;})
+    readonly method: EMethod;
+
+    @IsString({ message: &#x27;El nombre debe ser un texto.&#x27; })
+    @IsNotEmpty({ message: &#x27;El nombre no debe estar vacio.&#x27; })
+    @MinLength(3, { message: &#x27;El nombre debe contener $constraint1 o mas letras.&#x27; })
+    @MaxLength(48, { message: &#x27;El nombre debe contener un maximo de $constraint1 letras.&#x27; })
+    @Transform(({ value }) &#x3D;&gt; sanitizeHelper.satonizeALL(value))
+    readonly name:string;
+
+    
+    @IsBoolean({message:&#x27;El estado debe ser un booleano&#x27;})
+    @IsNotEmpty({ message: &#x27;El estado no debe estar vacio.&#x27; })
+    readonly enable:Boolean;
+
+
+
+}
 </code></pre>
     </div>
 </div>

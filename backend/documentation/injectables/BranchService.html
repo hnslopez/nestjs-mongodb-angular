@@ -458,12 +458,12 @@ export class BranchService {
     private readonly routerService:RouterService){}
 
   async create(createBranchDto: CreateBranchDto) {
-    const token &#x3D; await HashHelper.tokenGenerator();
-    const branch &#x3D; new this.branchModel({...createBranchDto,token });
+    const branch &#x3D; new this.branchModel({...createBranchDto});
+    const token &#x3D; await HashHelper.tokenGenerator(branch._id.toString());
+    branch.token &#x3D; token;
 
     await this.routerService.create(branch._id);
     branch.save();
-    
     return branch;
   }
 

@@ -87,14 +87,17 @@
                                 <a href="#create" >create</a>
                             </li>
                             <li>
-                                <a href="#findAll" >findAll</a>
-                            </li>
-                            <li>
                                     <span class="modifier">Async</span>
                                 <a href="#findOne" >findOne</a>
                             </li>
                             <li>
-                                <a href="#remove" >remove</a>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#loadRoutes" class="deprecated-name">loadRoutes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#onModuleInit" >onModuleInit</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
@@ -181,15 +184,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>access(method: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, path: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, branch: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>access(method: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, path: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, token: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">src/router/router.service.ts:33</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/router/router.service.ts:31</a></div>
                 </td>
             </tr>
 
@@ -234,7 +237,7 @@
 
                                 </tr>
                                 <tr>
-                                    <td>branch</td>
+                                    <td>token</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -283,8 +286,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="13"
-                            class="link-to-prism">src/router/router.service.ts:13</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">src/router/router.service.ts:14</a></div>
                 </td>
             </tr>
 
@@ -336,43 +339,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="findAll"></a>
-                    <span class="name">
-                        <span ><b>findAll</b></span>
-                        <a href="#findAll"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>findAll()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="25"
-                            class="link-to-prism">src/router/router.service.ts:25</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="findOne"></a>
                     <span class="name">
                         <span class="modifier">Async</span>
@@ -391,8 +357,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="28"
-                            class="link-to-prism">src/router/router.service.ts:28</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/router/router.service.ts:26</a></div>
                 </td>
             </tr>
 
@@ -444,24 +410,71 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="remove"></a>
+                    <a name="loadRoutes"></a>
                     <span class="name">
-                        <span ><b>remove</b></span>
-                        <a href="#remove"><span class="icon ion-ios-link"></span></a>
+                        <span class="modifier">Private</span>
+                        <span class="modifier">Async</span>
+                        <span class="deprecated-name"><b>loadRoutes</b></span>
+                        <a href="#loadRoutes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4 deprecated">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>loadRoutes()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/router/router.service.ts:46</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onModuleInit"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>onModuleInit</b></span>
+                        <a href="#onModuleInit"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>remove(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onModuleInit()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="45"
-                            class="link-to-prism">src/router/router.service.ts:45</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="68"
+                            class="link-to-prism">src/router/router.service.ts:68</a></div>
                 </td>
             </tr>
 
@@ -470,40 +483,8 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>id</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-                                    </td>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
                     </div>
                 </td>
             </tr>
@@ -531,8 +512,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">src/router/router.service.ts:39</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/router/router.service.ts:37</a></div>
                 </td>
             </tr>
 
@@ -598,17 +579,18 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable, OnModuleInit } from &#x27;@nestjs/common&#x27;;
 import { InjectModel } from &#x27;@nestjs/mongoose&#x27;;
 import { Model } from &#x27;mongoose&#x27;;
+import { HashHelper } from &#x27;src/common/helper&#x27;;
 import { GlobalService } from &#x27;src/common/services/global.service&#x27;;
-import { CreateRouterDto } from &#x27;./dto/create-router.dto&#x27;;
 import { UpdateRouterDto } from &#x27;./dto/update-router.dto&#x27;;
 import { IRouter } from &#x27;./interface/router.interface&#x27;;
 
 @Injectable()
-export class RouterService {
-  constructor(@InjectModel(&#x27;Router&#x27;) private routerModel: Model&lt;IRouter&gt;){}
+export class RouterService implements OnModuleInit {
+  constructor(@InjectModel(&#x27;Router&#x27;) private routerModel: Model&lt;IRouter&gt;,
+  ){}
 
   async create(branch:any) {
     var router &#x3D; [];
@@ -622,17 +604,14 @@ export class RouterService {
     return bulk;
   }
 
-  findAll() {
-    return &#x60;This action returns all router&#x60;;
-  }
   async findOne(id: string) {
     const result &#x3D; await this.routerModel.find({branch:id});
     return result;
   }
 
-  async access(method: string, path:string, branch:string) {
-    const result &#x3D; await this.routerModel.findOne({router:path,method:method,branch}); 
-
+  async access(method: string, path:string, token:string) {
+    const branch &#x3D; await HashHelper.decryptToken(token);
+    const result &#x3D; await this.routerModel.findOne({router:path,method:method,branch:branch}); 
     return result;
   }
 
@@ -642,8 +621,34 @@ export class RouterService {
     return result;
   }
 
-  remove(id: number) {
-    return &#x60;This action removes a #${id} router&#x60;;
+  /**
+   * @deprecated
+   */
+  private async loadRoutes(){
+       /*
+    const branch &#x3D; await this.branchModel.find();
+    var data &#x3D; {};
+
+     branch.map(async (r)&#x3D;&gt; {
+        data[r._id.toString()] &#x3D; [];
+
+      await this.cacheManager.set(r._id.toString(), &#x27;&#x27;);
+    });
+    
+    const routes &#x3D; await this.routerModel.find({branch});
+
+ 
+    console.log(data)
+    routes.map(async (r)&#x3D;&gt;{
+      data[r.branch._id.toString()].push([]);
+    });
+    */
+
+  }
+
+  async onModuleInit() {
+    await this.loadRoutes();
+
   }
 }
 </code></pre>

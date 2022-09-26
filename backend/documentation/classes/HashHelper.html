@@ -112,6 +112,11 @@
                             <li>
                                     <span class="modifier">Static</span>
                                     <span class="modifier">Async</span>
+                                <a href="#decryptToken" >decryptToken</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                    <span class="modifier">Async</span>
                                 <a href="#encrypt" >encrypt</a>
                             </li>
                             <li>
@@ -212,7 +217,7 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Compara texto encriptado e texto ingresado</p>
+                    <div class="io-description"><p>Compara texto encriptado y texto ingresado</p>
 </div>
 
                     <div class="io-description">
@@ -261,7 +266,7 @@
 
                     </div>
                     <div class="io-description">
-                        <p>Promise<boolean> Retorna un boolean, True si el texto encriptado y el ingresado son iguales.</p>
+                        <p>Promise<boolean>, Retorna un boolean, True si el texto encriptado y el ingresado son iguales.</p>
 
                     </div>
                 </td>
@@ -291,14 +296,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="35"
-                            class="link-to-prism">src/common/helper/hash.helper.ts:35</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/common/helper/hash.helper.ts:62</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Compara token encriptado y token ingresado</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -309,6 +316,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -323,6 +331,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>token</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>encripted</td>
@@ -335,6 +347,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>hasRefeshToken</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -342,11 +358,92 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
 
                     </div>
                     <div class="io-description">
+                        <p>Promise<boolean>, Retorna un booleano, True si el token encriptado y el ingresado son iguales.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="decryptToken"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>decryptToken</b></span>
+                        <a href="#decryptToken"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>decryptToken(token: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/common/helper/hash.helper.ts:41</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Decripta token de branch</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
                         
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>token</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>, token encriptado</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;string&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Promise<string>, Retorna el token decriptado</p>
+
                     </div>
                 </td>
             </tr>
@@ -449,14 +546,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="31"
-                            class="link-to-prism">src/common/helper/hash.helper.ts:31</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/common/helper/hash.helper.ts:52</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Refresca tokens de autentificación</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -467,6 +566,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -481,6 +581,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>, Token</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -488,11 +592,12 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>    <code>Promise&lt;string&gt;</code>
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>Promise<string>, Retorna nuevo token</p>
+
                     </div>
                 </td>
             </tr>
@@ -514,24 +619,64 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>tokenGenerator()</code>
+                    <code>tokenGenerator(str: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="27"
-                            class="link-to-prism">src/common/helper/hash.helper.ts:27</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/common/helper/hash.helper.ts:32</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Genera un token para branch</p>
+</div>
 
                     <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>str</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>, mongoId</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
                         <b>Returns : </b>    <code>Promise&lt;string&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Promise<string>, Retorna el token</p>
 
                     </div>
                 </td>
@@ -550,7 +695,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import * as bcrypt from &#x27;bcryptjs&#x27;;
 import * as argon2 from &#x27;argon2&#x27;;
-const crypto &#x3D; require(&#x27;crypto&#x27;) 
+var CryptoJS &#x3D; require(&quot;crypto-js&quot;);
  
 export class HashHelper {
   private static salt &#x3D; 10;
@@ -565,24 +710,51 @@ export class HashHelper {
   }
 
   /**
-   * Compara texto encriptado e texto ingresado
+   * Compara texto encriptado y texto ingresado
    * @param str {string}
    * @param encrypted {string}
-   * @returns Promise&lt;boolean&gt; Retorna un boolean, True si el texto encriptado y el ingresado son iguales.
+   * @returns Promise&lt;boolean&gt;, Retorna un boolean, True si el texto encriptado y el ingresado son iguales.
    */
   public static async compare(str: string, encrypted: string): Promise&lt;boolean&gt; {
     return await bcrypt.compare(str, encrypted);
   }
 
-  public static async tokenGenerator(): Promise&lt;string&gt; {
-    return await crypto.randomBytes(18).toString(&#x27;hex&#x27;).toUpperCase();
-  }
+  /**
+   * Genera un token para branch
+   * @param str {string}, mongoId
+   * @returns Promise&lt;string&gt;, Retorna el token
+   */
+  public static async tokenGenerator(str:string): Promise&lt;string&gt; {
+    return  CryptoJS.AES.encrypt(str, process.env.TOKEN_BRANCH).toString(); 
+   }
 
-  public static hashRefreshToken(str: string){
+   /**
+    * Decripta token de branch
+    * @param token, token encriptado
+   * @returns Promise&lt;string&gt;, Retorna el token decriptado
+    */
+   public static async decryptToken(token:string): Promise&lt;string&gt;{
+    var bytes &#x3D; await CryptoJS.AES.decrypt(token.toString(), process.env.TOKEN_BRANCH);
+    
+    return bytes.toString(CryptoJS.enc.Utf8);
+   }
+
+   /**
+    * Refresca tokens de autentificación
+    * @param str, Token
+    * @returns Promise&lt;string&gt;, Retorna nuevo token
+    */
+  public static hashRefreshToken(str: string):Promise&lt;string&gt;{
     return argon2.hash(str);
   }
 
-  public static async compareHashRefreshToken(str:string, encripted: string){
+  /**
+   * Compara token encriptado y token ingresado
+   * @param str token
+   * @param encripted hasRefeshToken
+   * @returns Promise&lt;boolean&gt;, Retorna un booleano, True si el token encriptado y el ingresado son iguales.
+   */
+  public static async compareHashRefreshToken(str:string, encripted: string):Promise&lt;boolean&gt;{
     return argon2.verify(str, encripted);
   }
 

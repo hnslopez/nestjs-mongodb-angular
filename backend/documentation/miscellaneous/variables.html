@@ -67,7 +67,7 @@
                             <a href="#BranchSchema" title="src/branch/schemas/branch.schema.ts" ><b>BranchSchema</b>&nbsp;&nbsp;&nbsp;(src/.../branch.schema.ts)</a>
                         </li>
                         <li>
-                            <a href="#crypto" title="src/common/helper/hash.helper.ts" ><b>crypto</b>&nbsp;&nbsp;&nbsp;(src/.../hash.helper.ts)</a>
+                            <a href="#CryptoJS" title="src/common/helper/hash.helper.ts" ><b>CryptoJS</b>&nbsp;&nbsp;&nbsp;(src/.../hash.helper.ts)</a>
                         </li>
                         <li>
                             <a href="#HashSchema" title="src/users/schemas/hash.schema.ts" ><b>HashSchema</b>&nbsp;&nbsp;&nbsp;(src/.../hash.schema.ts)</a>
@@ -122,11 +122,15 @@
                 <tr>
                     <td class="col-md-4">
                         <i>Default value : </i><code>createParamDecorator(
-    (data:string, ctx: ExecutionContext) &#x3D;&gt; {
+    async (data:string, ctx: ExecutionContext) &#x3D;&gt; {
         const request &#x3D; ctx.switchToHttp().getRequest();
-        const branch &#x3D; request.headers.code;     
-        if (branch &#x3D;&#x3D;&#x27;62a90153efa940f40780e438&#x27;) return {};
-        return {branch};
+        const branch &#x3D; request.headers.code;    
+        if(!branch) throw new BadRequestException();
+        const id &#x3D;  await HashHelper.decryptToken(branch);
+
+        if(!id) throw new UnauthorizedException(&#x27;No se encuentra autorizado&#x27;);
+        if(!mongoose.Types.ObjectId.isValid(id)) throw new UnauthorizedException(&#x27;No se encuentra autorizado&#x27;);
+        return id;
     }
 )</code>
                     </td>
@@ -154,7 +158,7 @@
                         <i>Default value : </i><code>new Schema({
     name:{type:String, require},
     user:{ type: mongoose.Types.ObjectId, ref:&#x27;User&#x27; },
-    token:{type:String, required:true },
+    token:{type:String },
     createdAt: { type: Date, default: Date.now },
     status: {type:String, enum:EstatusBranch, required: true, default: EstatusBranch.ACTIVE}
 })</code>
@@ -171,16 +175,16 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="crypto"></a>
+                    <a name="CryptoJS"></a>
                     <span class="name">
-                        <span ><b>crypto</b></span>
-                        <a href="#crypto"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>CryptoJS</b></span>
+                        <a href="#CryptoJS"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>require(&#x27;crypto&#x27;)</code>
+                        <i>Default value : </i><code>require(&quot;crypto-js&quot;)</code>
                     </td>
                 </tr>
 
@@ -257,10 +261,7 @@
     router:{ type:String}, //TODO: ENUM ROUTER LIST
     method:{ type:String, enum:EMethod, required:true},
     name:{ type:String, required:true },
-    pCreate : {type:String, enum:ECrud, default:ECrud.NO},
-    pRead:   { type:String, enum:ECrud, default:ECrud.NO},
-    pUpdate: { type:String, enum:ECrud, default:ECrud.NO},
-    pDelete: { type:String, enum:ECrud, default:ECrud.NO},
+    enable:{ type:Boolean, required:true},
     branch: { type:mongoose.Types.ObjectId, ref:&#x27;Branch&#x27;, required:true}
 })</code>
                     </td>
@@ -407,6 +408,7 @@
                 <tr>
                     <td class="col-md-4">
                         <i>Default value : </i><code>new Schema({
+    name:   {type:String},
     router: { type:String, required:true},
     method: { type:String, required:true},
     status:{ type:Boolean, required:true, default:true},

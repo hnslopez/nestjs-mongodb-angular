@@ -163,7 +163,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>validate(payload: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    <code>validate(payload: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, req: Request)</code>
                 </td>
             </tr>
 
@@ -195,6 +195,18 @@
                                     <td>payload</td>
                                     <td>
                                                 <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>req</td>
+                                    <td>
+                                            <code>Request</code>
                                     </td>
 
                                     <td>
@@ -238,9 +250,13 @@ export class JwtStrategy extends PassportStrategy(Strategy,&#x27;jwt&#x27;) {
       secretOrKey: process.env.JWT_SECRET,
     });
   }
-  async validate(payload: any) {
+  async validate(payload: any,req: Request) {
      const { sub: _id } &#x3D; payload;
-    return await this.userService.getUserById(_id);
+
+     const user &#x3D; await this.userService.getUserById(_id);
+     //console.log(user)
+     //extraer permisos aca...
+      return user;
   }
 }
 </code></pre>

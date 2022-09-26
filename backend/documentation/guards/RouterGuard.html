@@ -108,7 +108,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/auth/guards/router.guard.ts:7</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/auth/guards/router.guard.ts:6</a></div>
                             </td>
                         </tr>
 
@@ -173,8 +173,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="10"
-                            class="link-to-prism">src/auth/guards/router.guard.ts:10</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="9"
+                            class="link-to-prism">src/auth/guards/router.guard.ts:9</a></div>
                 </td>
             </tr>
 
@@ -227,24 +227,45 @@
 
 
         <div class="tab-pane fade  tab-source-code" id="c-source">
-            <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CanActivate, ExecutionContext, Inject, Injectable } from &quot;@nestjs/common&quot;;
-import { Observable } from &quot;rxjs&quot;;
+            <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CanActivate, ExecutionContext, Injectable } from &quot;@nestjs/common&quot;;
 import { RouterService } from &quot;src/router/router.service&quot;;
 
 
 @Injectable()
-export class RouterGuard implements CanActivate{
+export class RouterGuard implements CanActivate{ 
     constructor(private readonly routerService:RouterService) {}
     
     async canActivate(context: ExecutionContext){
         const request &#x3D; context.switchToHttp().getRequest();
         const header &#x3D; request.headers.code;
+        const roles &#x3D; context.switchToHttp().getRequest().user?.profile.rolesBranch;
+        var routesEnables &#x3D; [];
+        
+        if(roles.length !&#x3D; 0){
+            const permission &#x3D; roles.map((roles)&#x3D;&gt; roles.permission).filter((permission) &#x3D;&gt; permission.length &gt; 0)
+            .map((permission) &#x3D;&gt; {
+                return permission.map((permission)&#x3D;&gt;{
+                    return [permission.router.toLowerCase(), permission.method.toLowerCase()]
+               })
+            })
+
+            routesEnables &#x3D; routesEnables.concat(...permission)
+        }
+
         if(!header) return false;
-        if(header &#x3D;&#x3D; &#x27;553F99A23DD58E17E115915B4D98AF2DC44F&#x27;) return true;
-        const access &#x3D; await (await this.routerService.access(request.method.toLowerCase(), request.route.path, header))
-        if(!access) return false;
+
+        //TODO: QUITARLO
         return true;
-        //return access.status;
+
+        const access &#x3D; await (await this.routerService.access(request.method.toLowerCase(), request.route.path, header));
+        let permissionEnable &#x3D; routesEnables.some((permission)&#x3D;&gt; JSON.stringify(permission) &#x3D;&#x3D;&#x3D; JSON.stringify([access.router, access.method]));
+        if(header &#x3D;&#x3D; process.env.CENTRAL_TOKEN &amp;&amp; permissionEnable) return true;
+     
+        if(!access || !permissionEnable) return false;
+        if(access?.status &#x3D;&#x3D; false) return false;
+
+        return true;
+
      }
     }
 

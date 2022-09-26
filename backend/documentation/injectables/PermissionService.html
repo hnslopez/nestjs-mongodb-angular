@@ -79,6 +79,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#create" >create</a>
                             </li>
                             <li>
@@ -105,6 +106,54 @@
     </table>
 </section>
 
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(permissionModel: <a href="../interfaces/IPermisssion.html" target="_self">Model&lt;IPermisssion&gt;</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/permission/permission.service.ts:9</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>permissionModel</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/IPermisssion.html" target="_self" >Model&lt;IPermisssion&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
 
             <section>
     
@@ -117,6 +166,7 @@
                 <td class="col-md-4">
                     <a name="create"></a>
                     <span class="name">
+                        <span class="modifier">Async</span>
                         <span ><b>create</b></span>
                         <a href="#create"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -124,15 +174,16 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>create(createPermissionDto: <a href="../classes/CreatePermissionDto.html" target="_self">CreatePermissionDto</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>create(createPermissionDto: <a href="../classes/CreatePermissionDto.html" target="_self">CreatePermissionDto</a>, code: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="7"
-                            class="link-to-prism">src/permission/permission.service.ts:7</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="12"
+                            class="link-to-prism">src/permission/permission.service.ts:12</a></div>
                 </td>
             </tr>
 
@@ -164,13 +215,25 @@
 
 
                                 </tr>
+                                <tr>
+                                    <td>code</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
                             </tbody>
                         </table>
                     </div>
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                        <b>Returns : </b>    <code>unknown</code>
 
                     </div>
                     <div class="io-description">
@@ -200,8 +263,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">src/permission/permission.service.ts:11</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="18"
+                            class="link-to-prism">src/permission/permission.service.ts:18</a></div>
                 </td>
             </tr>
 
@@ -237,8 +300,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">src/permission/permission.service.ts:15</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/permission/permission.service.ts:22</a></div>
                 </td>
             </tr>
 
@@ -306,8 +369,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">src/permission/permission.service.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/permission/permission.service.ts:30</a></div>
                 </td>
             </tr>
 
@@ -375,8 +438,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="19"
-                            class="link-to-prism">src/permission/permission.service.ts:19</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/permission/permission.service.ts:26</a></div>
                 </td>
             </tr>
 
@@ -443,13 +506,20 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
+import { InjectModel } from &#x27;@nestjs/mongoose&#x27;;
+import { Model } from &#x27;mongoose&#x27;;
 import { CreatePermissionDto } from &#x27;./dto/create-permission.dto&#x27;;
 import { UpdatePermissionDto } from &#x27;./dto/update-permission.dto&#x27;;
+import { IPermisssion } from &#x27;./interface/permission.schema&#x27;;
 
 @Injectable()
 export class PermissionService {
-  create(createPermissionDto: CreatePermissionDto) {
-    return &#x27;This action adds a new permission&#x27;;
+  constructor(@InjectModel(&#x27;Permission&#x27;) private permissionModel: Model&lt;IPermisssion&gt;){}
+
+  async create(createPermissionDto: CreatePermissionDto, code:string) {
+    const permission &#x3D; new this.permissionModel({ ...createPermissionDto, branch:code });
+    await permission.save();
+    return &#x27;Se ha creado el permiso.&#x27;;
   }
 
   findAll() {

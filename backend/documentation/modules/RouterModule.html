@@ -173,12 +173,14 @@ import { RouterService } from &#x27;./router.service&#x27;;
 import { RouterController } from &#x27;./router.controller&#x27;;
 import { MongooseModule } from &#x27;@nestjs/mongoose&#x27;;
 import { RouterSchema } from &#x27;./schemas/router.schema&#x27;;
+import { BranchSchema } from &#x27;src/branch/schemas/branch.schema&#x27;;
 
 @Global()
 @Module({
   imports: [
     MongooseModule.forFeature([
-      {name:&#x27;Router&#x27;, schema:RouterSchema}
+      {name:&#x27;Router&#x27;, schema:RouterSchema},
+      {name:&#x27;Branch&#x27;, schema: BranchSchema}
 
     ])
   ],

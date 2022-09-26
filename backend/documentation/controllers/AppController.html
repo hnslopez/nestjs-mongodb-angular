@@ -79,15 +79,7 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#login" >login</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Async</span>
                                 <a href="#loginJWT" >loginJWT</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Async</span>
-                                <a href="#logout" >logout</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
@@ -118,52 +110,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="login"></a>
-                    <span class="name">
-                        <span class="modifier">Async</span>
-                        <span ><b>login</b></span>
-                        <a href="#login"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>login()</code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <b>Decorators : </b>
-                    <br />
-                    <code>@UseGuards(LocalAuthGuard)<br />@Post(&#x27;auth/login&#x27;)<br /></code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="25"
-                            class="link-to-prism">src/app.controller.ts:25</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="loginJWT"></a>
                     <span class="name">
                         <span class="modifier">Async</span>
@@ -189,8 +135,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="41"
-                            class="link-to-prism">src/app.controller.ts:41</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">src/app.controller.ts:23</a></div>
                 </td>
             </tr>
 
@@ -254,80 +200,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="logout"></a>
-                    <span class="name">
-                        <span class="modifier">Async</span>
-                        <span ><b>logout</b></span>
-                        <a href="#logout"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>logout(req)</code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <b>Decorators : </b>
-                    <br />
-                    <code>@Session()<br />@Get(&#x27;auth/logout&#x27;)<br /></code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="31"
-                            class="link-to-prism">src/app.controller.ts:31</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>req</td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="LogoutJWT"></a>
                     <span class="name">
                         <span class="modifier">Async</span>
@@ -347,14 +219,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@JWTSession()<br />@Post(&#x27;auth/v2/logout&#x27;)<br />@HttpCode(HttpStatus.OK)<br /></code>
+                    <code>@UseGuards(JwtAuthGuard)<br />@JWTSession()<br />@Get(&#x27;auth/v2/logout&#x27;)<br />@HttpCode(HttpStatus.OK)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="54"
-                            class="link-to-prism">src/app.controller.ts:54</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">src/app.controller.ts:38</a></div>
                 </td>
             </tr>
 
@@ -442,8 +314,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="69"
-                            class="link-to-prism">src/app.controller.ts:69</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="53"
+                            class="link-to-prism">src/app.controller.ts:53</a></div>
                 </td>
             </tr>
 
@@ -524,26 +396,8 @@ import { JwtNoAuthGuard } from &#x27;./auth/guards/jwt-no-auth.guard&#x27;;
 @Controller()
 export class AppController {
   constructor(
-    private readonly appService: AppService,
     private readonly authService: AuthService,
   ) {}
-
-  //------------SESSIONS-------------------
-  @UseGuards(LocalAuthGuard)
-  @Post(&#x27;auth/login&#x27;)
-  async login() {
-    return &#x27;login&#x27;;
-  }
-
-  @Session()
-  @Get(&#x27;auth/logout&#x27;)
-  async logout(@Request() req) {
-    await req.logout();
-    return { message: &#x27;logout success&#x27; };
-  }
-
- 
-  //-------------JWT-------------------
 
   @UseGuards(JwtNoAuthGuard,JwtLocalAuthGuard)
   @Post(&#x27;auth/v2/login&#x27;)
@@ -557,8 +411,10 @@ export class AppController {
     return data;
   }
 
+  
+  @UseGuards(JwtAuthGuard)
   @JWTSession()
-  @Post(&#x27;auth/v2/logout&#x27;)
+  @Get(&#x27;auth/v2/logout&#x27;)
   @HttpCode(HttpStatus.OK)
   async LogoutJWT(@User() user: IUser, @Res() res) {
     

@@ -26,6 +26,8 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
 
 registerLocaleData(es);
 
@@ -44,11 +46,15 @@ registerLocaleData(es);
     HttpClientModule,
     BrowserAnimationsModule,
     IconsProviderModule,
+
     NzLayoutModule,
     NzMenuModule,
     NzDropDownModule,
     NzGridModule,
     NzAvatarModule,
+    NzButtonModule,
+    NzDividerModule,
+    
     StoreModule.forRoot({}, {}),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot(),

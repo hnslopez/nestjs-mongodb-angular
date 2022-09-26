@@ -714,7 +714,7 @@ export class AuthService {
 
     async getToken(_id: string, roles?: string[]) {
 
-        const [at, rt] &#x3D; await Promise.all([
+        const [token, refresh] &#x3D; await Promise.all([
             this.jwtService.signAsync({
                 sub: _id,
 
@@ -731,8 +731,8 @@ export class AuthService {
         ]);
 
         return {
-            access_token: at,
-            refresh_token: rt
+            access_token: token,
+            refresh_token: refresh
         }
 
 

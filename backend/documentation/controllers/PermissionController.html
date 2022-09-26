@@ -128,7 +128,7 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>create(createPermissionDto: <a href="../classes/CreatePermissionDto.html" target="_self">CreatePermissionDto</a>)</code>
+<code>create(createPermissionDto: <a href="../classes/CreatePermissionDto.html" target="_self">CreatePermissionDto</a>, id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
@@ -136,14 +136,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Post()<br /></code>
+                    <code>@JWTSession()<br />@Post()<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">src/permission/permission.controller.ts:11</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">src/permission/permission.controller.ts:14</a></div>
                 </td>
             </tr>
 
@@ -167,6 +167,18 @@
                                     <td>createPermissionDto</td>
                                     <td>
                                                 <code><a href="../classes/CreatePermissionDto.html" target="_self" >CreatePermissionDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
 
                                     <td>
@@ -218,8 +230,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="16"
-                            class="link-to-prism">src/permission/permission.controller.ts:16</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="19"
+                            class="link-to-prism">src/permission/permission.controller.ts:19</a></div>
                 </td>
             </tr>
 
@@ -262,8 +274,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="21"
-                            class="link-to-prism">src/permission/permission.controller.ts:21</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/permission/permission.controller.ts:24</a></div>
                 </td>
             </tr>
 
@@ -338,8 +350,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="31"
-                            class="link-to-prism">src/permission/permission.controller.ts:31</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/permission/permission.controller.ts:34</a></div>
                 </td>
             </tr>
 
@@ -414,8 +426,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">src/permission/permission.controller.ts:26</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/permission/permission.controller.ts:29</a></div>
                 </td>
             </tr>
 
@@ -483,14 +495,17 @@
 import { PermissionService } from &#x27;./permission.service&#x27;;
 import { CreatePermissionDto } from &#x27;./dto/create-permission.dto&#x27;;
 import { UpdatePermissionDto } from &#x27;./dto/update-permission.dto&#x27;;
+import { Branch } from &#x27;src/common/decorators/branch.decorator&#x27;;
+import { JWTSession } from &#x27;src/common/decorators&#x27;;
 
 @Controller(&#x27;permission&#x27;)
 export class PermissionController {
   constructor(private readonly permissionService: PermissionService) {}
 
+  @JWTSession()
   @Post()
-  create(@Body() createPermissionDto: CreatePermissionDto) {
-    return this.permissionService.create(createPermissionDto);
+  create(@Body() createPermissionDto: CreatePermissionDto, @Branch() id:string) {
+    return this.permissionService.create(createPermissionDto,id);
   }
 
   @Get()

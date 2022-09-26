@@ -26,26 +26,31 @@
       </div>      
 --> 
 <ul nz-menu nzSelectable  nzMode="horizontal" class="header-menu">
-  <li nz-menu-item *ngFor="let item of menuAuth" [ngClass]="{ 'nav-right': item.right}" >
+  <li nz-menu-item class="nav-right">
+    <a (click)="logout()">CERRAR SESIÓN</a>
+  </li>
+  <li nz-menu-item class="nav-right">
+    {{user.name[0] | uppercase}}. {{user.lastName | uppercase }}
+  </li>
+  <li nz-menu-item *ngFor="let item of menu" [ngClass]="{ 'nav-right': item.right}" >
     <a [routerLink]="item.link">{{item.name}}</a>
   </li>
 
-    <li nz-menu-item class="nav-right">
-      <a (click)="logout()">CERRAR SESIÓN</a>
-    </li>
-    <li class="nav-right">
-      {{user.name | uppercase}} {{user.lastName | uppercase }}
-    </li>
 
 
   </ul>    
-
     </div>
     <ng-template #loginNow>
-      <ul nz-menu nzMode="horizontal" class="header-menu" >
-        <li nz-menu-item *ngFor="let item of menu" [ngClass]="{ 'nav-right': item?.right}" >
-          <a [routerLink]="item.link">{{item.name}}</a>
+      <ul nz-menu nzMode="horizontal" class="header-menu">
+        <li nz-menu-item class="nav-right">
+          <a [routerLink]="'/login'">INICIAR SESIÓN</a>
         </li>
+        <ng-container *ngFor="let item of menu">
+          <li nz-menu-item  [ngClass]="{ 'nav-right': item?.right}" >
+            <a [routerLink]="item.link">{{item.name}}</a>
+          </li>
+          <nz-divider nzType="vertical"></nz-divider>
+      </ng-container>
       </ul>    
     </ng-template>
    
