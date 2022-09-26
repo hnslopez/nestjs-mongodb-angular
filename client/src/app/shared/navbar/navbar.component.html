@@ -35,9 +35,6 @@
   <li nz-menu-item *ngFor="let item of menu" [ngClass]="{ 'nav-right': item.right}" >
     <a [routerLink]="item.link">{{item.name}}</a>
   </li>
-
-
-
   </ul>    
     </div>
     <ng-template #loginNow>
@@ -45,11 +42,12 @@
         <li nz-menu-item class="nav-right">
           <a [routerLink]="'/login'">INICIAR SESIÓN</a>
         </li>
-        <ng-container *ngFor="let item of menu">
+        <ng-container *ngFor="let item of menu; let i= index" [att.data-index='i']>
           <li nz-menu-item  [ngClass]="{ 'nav-right': item?.right}" >
             <a [routerLink]="item.link">{{item.name}}</a>
           </li>
-          <nz-divider nzType="vertical"></nz-divider>
+            <nz-divider *ngIf="i < menu.length-1" nzType="vertical"></nz-divider>
+   
       </ng-container>
       </ul>    
     </ng-template>

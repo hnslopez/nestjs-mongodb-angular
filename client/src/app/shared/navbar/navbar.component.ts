@@ -12,7 +12,8 @@ export class NavbarComponent implements OnInit {
 
   readonly menu = [
     {link:'/', name:'HOME', right:false},
-    {link:'/about', name:'PROYECTO', right:false}
+    {link:'/about', name:'PROYECTO', right:false},
+    {link:'/wip', name:'WIP'}
   ];
 
 
