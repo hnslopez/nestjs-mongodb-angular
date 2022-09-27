@@ -1,32 +1,7 @@
-<!-- 
-  <nz-layout class="app-layout">
-<!-- 
-  <nz-sider class="menu-sidebar"
-            nzCollapsible
-            nzWidth="256px"
-            nzBreakpoint="md"
-            [(nzCollapsed)]="isCollapsed"
-            [nzTrigger]="null"
-            [nzCollapsedWidth]="nbWidth">
-           <app-sidebar [isCollapsed]="isCollapsed"></app-sidebar>
-        </nz-sider>
-
-  <nz-layout>
-    
-
-    <nz-content style="margin:0px">
-     <div class="inner-content">
-      </div> 
-    </nz-content>
-  </nz-layout>
-</nz-layout>
--->
 <nz-layout class=" px-0 h-100">
   <nz-header>
     <app-navbar [isCollapsed]="isCollapsed" (collapse)="updateCollapse($event)"></app-navbar>
 </nz-header>
-
-
 <nz-content>
   <router-outlet></router-outlet>
 </nz-content>

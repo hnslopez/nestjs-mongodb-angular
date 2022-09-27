@@ -22,12 +22,12 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { CookieService } from 'ngx-cookie-service';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { HomeModule } from './features/home/home.module';
 
 registerLocaleData(es);
 
@@ -36,7 +36,6 @@ registerLocaleData(es);
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    SidebarComponent,
   ],
   imports: [
     CoreModule,
@@ -46,6 +45,7 @@ registerLocaleData(es);
     HttpClientModule,
     BrowserAnimationsModule,
     IconsProviderModule,
+    HomeModule,
 
     NzLayoutModule,
     NzMenuModule,
