@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
         if (title) {
           this.titleService.setTitle(`DEMO - ${title}`);
         }
-      });
+      });  
   }
 
   @HostListener('window:resize', ['$event'])
@@ -59,6 +59,8 @@ export class AppComponent implements OnInit {
   }
 
 
-  constructor(private router:Router, private titleService: Title){}
+  constructor(private router:Router, private titleService: Title){
+
+  }
 
 }

@@ -1,10 +1,13 @@
-<nz-layout class=" px-0 h-100">
-  <nz-header>
+<nz-layout class=" px-0 min-vh-100" data-theme="dark">
+  <nz-header class="sticky-top">
     <app-navbar [isCollapsed]="isCollapsed" (collapse)="updateCollapse($event)"></app-navbar>
 </nz-header>
-<nz-content>
+
+<nz-content class="container my-5">
   <router-outlet></router-outlet>
 </nz-content>
 
-  <nz-footer><app-footer></app-footer></nz-footer>
+  <nz-footer>
+    <app-footer></app-footer>
+  </nz-footer>
 </nz-layout>
