@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   data: { href: string; title: string; avatar: string; description: string; content: string; }[] | undefined;
-
+  gridStyle = {
+    width: '25%',
+    textAlign: 'center'
+  };
 
   ngOnInit(): void {
     this.loadData(1);
