@@ -7,6 +7,7 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzSpaceModule } from 'ng-zorro-antd/space';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NzCardModule } from 'ng-zorro-antd/card';
     NzGridModule,
     NzListModule,
     NzDividerModule,
-    NzCardModule
+    NzCardModule,
+    NzSpaceModule
   ]
 })
 export class HomeModule { }

@@ -1,46 +1,65 @@
 <div class="jumbotron">
-    <h1 class="display-4">Hello, world!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-        featured content or information.</p>
-    <nz-divider></nz-divider>
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+    featured content or information.</p>
+  <nz-divider></nz-divider>
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
 
-    <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
 </div>
 <nz-divider></nz-divider>
 
 <section>
-
-    <div nz-row>
-      <div nz-col [nzSpan]="24">
-    
-        <nz-card nzHoverable [nzCover]="coverTemplate">
-          <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
-        </nz-card>
-        <ng-template #coverTemplate>
-          <img alt="example" style="width:240px" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
-        </ng-template>
-
+  <div class="container" >
+    <nz-card class="mb-3">
+      <div class="row">
+        <div class="col-md-4">
+          <img class="img-fluid" [src]="" [alt]="'ax'">
+        </div>
+        <div class="col-md-8">
+          <h4 class="m-b-10">title</h4>
+          <p class="lh-1-8 m-b-20">
+            <span>Description</span>
+          </p>
+          <div class="text-right">
+            <a class="font-weight-semibold" nz-button nzType="link">Read More</a>
+          </div>
+        </div>
       </div>
-
-      <div nz-col [nzSpan]="24">
-        <nz-card nzHoverable [nzCover]="coverTemplate">
-          <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
-        </nz-card>
-        <ng-template #coverTemplate>
-          <img alt="example" style="width:240px" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
-        </ng-template>
+    </nz-card>
+    <nz-card class="mb-3">
+      <div class="row">
+        <div class="col-md-8">
+          <h4 class="m-b-10">title</h4>
+          <p class="lh-1-8 m-b-20">
+            <span>Description</span>
+          </p>
+          <div class="text-right">
+            <a class="font-weight-semibold" nz-button nzType="link">Read More</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img class="img-fluid" [src]="" [alt]="'ax'">
+        </div>
       </div>
-      <div nz-col [nzSpan]="24">
-        <nz-card nzHoverable [nzCover]="coverTemplate">
-          <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
-        </nz-card>
-        <ng-template #coverTemplate>
-          <img alt="example" style="width:240px" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
-        </ng-template>
+    </nz-card>
+    <nz-card class="mb-3">
+      <div class="row">
+        <div class="col-md-4">
+          <img class="img-fluid" [src]="" [alt]="'ax'">
+        </div>
+        <div class="col-md-8">
+          <h4 class="m-b-10">title</h4>
+          <p class="lh-1-8 m-b-20">
+            <span>Description</span>
+          </p>
+          <div class="text-right">
+            <a class="font-weight-semibold" nz-button nzType="link">Read More</a>
+          </div>
+        </div>
       </div>
-    </div>
-
+    </nz-card>
+  </div>
 </section>
