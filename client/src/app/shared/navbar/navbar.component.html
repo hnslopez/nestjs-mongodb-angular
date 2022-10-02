@@ -1,27 +1,26 @@
 <div *ngIf="userData$ | async as user; else loginNow">
 <ul nz-menu nzSelectable  nzMode="horizontal" class="header-menu">
   <li nz-menu-item class="nav-right">
-    <a (click)="logout()">CERRAR SESIÓN</a>
+    <a (click)="logout()">{{"MAIN.NAVBAR.LOGOUT" | translate}}</a>
   </li>
   <li nz-menu-item class="nav-right">
     {{user.name[0] | uppercase}}. {{user.lastName | uppercase }}
   </li>
   <li nz-menu-item *ngFor="let item of menu" [ngClass]="{ 'nav-right': item.right}" >
-    <a [routerLink]="item.link">{{item.name}}</a>
+    <a [routerLink]="item.link">{{item.name | translate}}</a>
   </li>
   </ul>    
     </div>
     <ng-template #loginNow>
       <ul nz-menu nzMode="horizontal" class="header-menu">
         <li nz-menu-item class="nav-right">
-          <a [routerLink]="'/login'">INICIAR SESIÓN</a>
+          <a [routerLink]="'/login'">{{"MAIN.NAVBAR.LOGIN" | translate }}</a>
         </li>
         <ng-container *ngFor="let item of menu; let i= index" [att.data-index='i']>
           <li nz-menu-item  [ngClass]="{ 'nav-right': item?.right}" >
-            <a [routerLink]="item.link">{{item.name}}</a>
+            <a [routerLink]="item.link">{{item.name | translate}}</a>
           </li>
             <nz-divider *ngIf="i < menu.length-1" nzType="vertical"></nz-divider>
-   
       </ng-container>
       </ul>    
     </ng-template>

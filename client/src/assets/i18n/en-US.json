@@ -1,0 +1,43 @@
+{
+    "MAIN":{
+        "NAVBAR": {
+            "MAIN_PAGE": "HOME",
+            "ANGULAR":"ANGULAR",
+            "NESTJS":"NESTJS",
+            "MONGODB":"MONGODB",
+            "ABOUT": "INFO",
+            "LOGIN":"LOGIN",
+            "LOGOUT":"LOGOUT"
+
+        }
+    },
+    "MAIN_PAGE":{
+        "ANGULAR":{
+            "TITLE": "ANGULAR",
+            "DESCRIPTION":"A",
+            "LINK_TEXT":""
+        },
+        "NESTJS":{
+            "TITLE": "NESTJS",
+            "DESCRIPTION":"A",
+            "LINK_TEXT":""
+        },
+        "MONGODB":{
+            "TITLE": "MONGODB",
+            "DESCRIPTION":"A",
+            "LINK_TEXT":""
+        },
+        "SECURITY":{
+            "TITLE": "SEGURIDAD",
+            "DESCRIPTION":"A",
+            "LINK_TEXT":""
+        }
+    },
+    "LOGIN":{
+        "LOGIN":"Iniciar sesión",
+        "USERNAME":"Usuario",
+        "PASSWORD":"Contraseña",
+        "BUTTON_LOGIN":"INICIAR",
+        "FORGOT_PASSWORD":"¿No recuerdas tu contraseña?"
+    }
+}

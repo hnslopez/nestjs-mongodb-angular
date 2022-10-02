@@ -11,25 +11,14 @@ export class NavbarComponent implements OnInit {
   userData$ = this.authFacade.user$;
 
   readonly menu = [
-    {link:'/', name:'HOME', right:false},
-    {link:'/angular', name:'ANGULAR'},
-    {link:'/nestjs', name:'NESTJS'},
-    {link:'/mongodb', name:'MONGODB'},
-    {link:'/about', name:'ABOUT', right:false},
+    {link:'/', name:'MAIN.NAVBAR.MAIN_PAGE', right:false},
+    {link:'/angular', name:'MAIN.NAVBAR.ANGULAR'},
+    {link:'/nestjs', name:'MAIN.NAVBAR.NESTJS'},
+    {link:'/mongodb', name:'MAIN.NAVBAR.MONGODB'},
+    {link:'/about', name:'MAIN.NAVBAR.ABOUT', right:false},
 
   ];
 
-
-
-  @Input()
-  isCollapsed?: boolean;
-
-  @Output() 
-  collapse = new EventEmitter<boolean>();
-
-  changeCollapse(value: boolean) {
-    this.collapse.emit(value);
-  }
 
   logout(){
     this.authFacade.logout();
