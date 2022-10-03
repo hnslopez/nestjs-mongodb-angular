@@ -13,23 +13,23 @@
     },
     "MAIN_PAGE":{
         "ANGULAR":{
-            "TITLE": "ANGULAR",
-            "DESCRIPTION":"A",
+            "TITLE": "FRONTEND",
+            "DESCRIPTION":"Para la creación de la vista de la WEB APP, se utilizaron diferentes librerias solo el diseño tales como NG-ZORRO y Bootstrap. En cuanto a la funcionalidad se utilizaron buenas practicas, sistema de autenticación basada en JWT con almacenamiento tanto en cookies como en localStorage, soporte a multi idioma. ",
             "LINK_TEXT":"LEER MAS"
         },
         "NESTJS":{
-            "TITLE": "NESTJS",
-            "DESCRIPTION":"A",
+            "TITLE": "BACKEND",
+            "DESCRIPTION":"El sistema cuenta con 2 tipos de roles, los cuales son validados por decoradores en cada ruta de acceso (GET, POST, PATCH, DELETE), ademas de contar con sanitización de codigo, uso de regex, control de rutas publicas y privadas, variables de entorno, rate limits y uso de JWT (JSON WEB TOKEN).",
             "LINK_TEXT":"LEER MAS"
         },
         "MONGODB":{
-            "TITLE": "MONGODB",
-            "DESCRIPTION":"A",
+            "TITLE": "DATABASE",
+            "DESCRIPTION":"Base de datos normalizada dividiendo perfil del usuario por buenas practicas. Utilizando un sistema de Role Based Access Control (RBAC) para uno de los sistemas de roles, encriptación y adicionalmente almacenando JWT de cada usuario iniciado para mantener con su sesión de manera indefinida.",
             "LINK_TEXT":"LEER MAS"
         },
         "SECURITY":{
             "TITLE": "SEGURIDAD",
-            "DESCRIPTION":"A",
+            "DESCRIPTION":"Se realizaron multiples tecnicas de pestesting para controlar el nivel seguridad del software, utilizando softwares como OWAZAP ZAP para identificar las vulneabilidades del sistema y asi poder corregirlas...",
             "LINK_TEXT":"LEER MAS"
         }
     },

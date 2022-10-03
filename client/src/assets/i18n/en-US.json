@@ -14,23 +14,23 @@
     "MAIN_PAGE":{
         "ANGULAR":{
             "TITLE": "ANGULAR",
-            "DESCRIPTION":"A",
-            "LINK_TEXT":""
+            "DESCRIPTION":"IN WORKING PROGRESS",
+            "LINK_TEXT":"READ MORE"
         },
         "NESTJS":{
-            "TITLE": "NESTJS",
-            "DESCRIPTION":"A",
-            "LINK_TEXT":""
+            "TITLE": "BACKEND",
+            "DESCRIPTION":"IN WORKING PROGRESS",
+            "LINK_TEXT":"READ MORE"
         },
         "MONGODB":{
-            "TITLE": "MONGODB",
-            "DESCRIPTION":"A",
-            "LINK_TEXT":""
+            "TITLE": "DATABASE",
+            "DESCRIPTION":"IN WORKING PROGRESS",
+            "LINK_TEXT":"READ MORE"
         },
         "SECURITY":{
-            "TITLE": "SEGURIDAD",
-            "DESCRIPTION":"A",
-            "LINK_TEXT":""
+            "TITLE": "SECURITY",
+            "DESCRIPTION":"IN WORKING PROGRESS",
+            "LINK_TEXT":"READ MORE"
         }
     },
     "LOGIN":{

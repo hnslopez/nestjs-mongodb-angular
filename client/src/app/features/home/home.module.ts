@@ -9,6 +9,7 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { TranslateModule } from '@ngx-translate/core';
+import { NzTypographyModule } from 'ng-zorro-antd/typography';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TranslateModule } from '@ngx-translate/core';
     NzDividerModule,
     NzCardModule,
     NzSpaceModule,
-    TranslateModule
+    TranslateModule,
+    NzTypographyModule
   ]
 })
 export class HomeModule { }
