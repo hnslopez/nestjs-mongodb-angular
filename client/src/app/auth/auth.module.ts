@@ -18,6 +18,8 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { TranslateModule } from '@ngx-translate/core';
+
 
 const routes: Routes = [
   {
@@ -38,6 +40,7 @@ const routes: Routes = [
     NzCardModule,
     NzIconModule,
     NzButtonModule,
+    TranslateModule,
     RouterModule.forChild(routes),
     NzNotificationModule,
     StoreModule.forFeature(AUTH_FEATURE_KEY, authReducer),

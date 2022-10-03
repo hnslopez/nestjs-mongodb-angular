@@ -6,7 +6,7 @@
             "NESTJS":"NESTJS",
             "MONGODB":"MONGODB",
             "ABOUT": "INFO",
-            "LOGIN":"LOGIN",
+            "LOGIN":"SIGN IN",
             "LOGOUT":"LOGOUT"
 
         }
@@ -34,10 +34,10 @@
         }
     },
     "LOGIN":{
-        "LOGIN":"Iniciar sesión",
-        "USERNAME":"Usuario",
-        "PASSWORD":"Contraseña",
-        "BUTTON_LOGIN":"INICIAR",
-        "FORGOT_PASSWORD":"¿No recuerdas tu contraseña?"
+        "LOGIN":"Sign In",
+        "USERNAME":"Username",
+        "PASSWORD":"Pasword",
+        "BUTTON_LOGIN":"ENTER",
+        "FORGOT_PASSWORD":"Forgot password?"
     }
 }

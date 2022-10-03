@@ -13,11 +13,11 @@
         <div class="mx-auto">
             <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
               <nz-form-item class="mb-0" >
-                <h3 nz-typography >Iniciar sesión</h3>
+                <h3 nz-typography >{{"LOGIN.LOGIN" | translate}}</h3>
               </nz-form-item>
               <nz-form-item>
                 <nz-form-control [nzErrorTip]="userErrorTp">
-                  <nz-form-label [nzSpan]="5">Usuario</nz-form-label>
+                  <nz-form-label [nzSpan]="5">{{"LOGIN.USERNAME" | translate}}</nz-form-label>
                  <nz-input-group nzPrefixIcon="user">
                     <input type="text" nz-input formControlName="userName" maxlength="16" />
                     <ng-template #userErrorTp let-control>
@@ -29,7 +29,7 @@
               </nz-form-item>
               <nz-form-item>
                 <nz-form-control [nzErrorTip]="passwordErrorTp">
-                  <nz-form-label [nzSpan]="5">Contraseña</nz-form-label>
+                  <nz-form-label [nzSpan]="5">{{"LOGIN.PASSWORD" | translate}}</nz-form-label>
                   <nz-input-group nzPrefixIcon="lock" [nzSuffix]="passw">
                     <input [type]="passwordVisible ? 'text' : 'password'" maxlength="16"  nz-input formControlName="password" autocomplete="off"/>
                     <ng-template #passwordErrorTp let-control>
@@ -44,10 +44,10 @@
               </nz-form-item>
               <div nz-row class="login-form-margin">
                 <div nz-col [nzSpan]="null">
-                  <a class="login-form-forgot">¿No recuerdas tu contraseña?</a>
+                  <a class="login-form-forgot">{{"LOGIN.FORGOT_PASSWORD" | translate}}</a>
                 </div>
               </div>
-              <button nz-button class="login-form-button login-form-margin" nzSize="large" nzType="primary" type="submit"  [nzLoading]="(isLoading$ | async)!">INICIAR</button>
+              <button nz-button class="login-form-button login-form-margin" nzSize="large" nzType="primary" type="submit"  [nzLoading]="(isLoading$ | async)!">{{"LOGIN.BUTTON_LOGIN" | translate}}</button>
   
             </form>
         </div>
