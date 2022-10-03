@@ -10,6 +10,7 @@ import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { TranslateModule } from '@ngx-translate/core';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NzTypographyModule } from 'ng-zorro-antd/typography';
     NzCardModule,
     NzSpaceModule,
     TranslateModule,
-    NzTypographyModule
+    NzTypographyModule,
+    NzButtonModule
   ]
 })
 export class HomeModule { }
