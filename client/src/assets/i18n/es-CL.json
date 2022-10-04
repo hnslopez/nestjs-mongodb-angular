@@ -12,6 +12,8 @@
         }
     },
     "MAIN_PAGE":{
+        "TITLE":"ANGULAR-NESTJS-MONGODB",
+        "DESCRIPTION":"Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.",
         "ANGULAR":{
             "TITLE": "FRONTEND",
             "DESCRIPTION":"Para la creación de la vista de la WEB APP, se utilizaron diferentes librerias solo el diseño tales como NG-ZORRO y Bootstrap. En cuanto a la funcionalidad se utilizaron buenas practicas, sistema de autenticación basada en JWT con almacenamiento tanto en cookies como en localStorage, soporte a multi idioma. ",

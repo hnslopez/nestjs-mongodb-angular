@@ -11,6 +11,7 @@ import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { TranslateModule } from '@ngx-translate/core';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
     NzSpaceModule,
     TranslateModule,
     NzTypographyModule,
-    NzButtonModule
+    NzButtonModule,
+    NzIconModule
   ]
 })
 export class HomeModule { }
