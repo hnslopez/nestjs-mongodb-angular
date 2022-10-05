@@ -11,7 +11,7 @@ const MongoStore = require('connect-mongo')
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  app.use(helmet());
+  // app.use(helmet());
   app.enableCors({
     origin: ['http://localhost:4200','http://localhost:8081'],
     credentials: true,

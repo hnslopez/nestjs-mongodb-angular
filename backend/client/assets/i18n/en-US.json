@@ -1,0 +1,45 @@
+{
+    "MAIN":{
+        "NAVBAR": {
+            "MAIN_PAGE": "HOME",
+            "ANGULAR":"ANGULAR",
+            "NESTJS":"NESTJS",
+            "MONGODB":"MONGODB",
+            "ABOUT": "INFO",
+            "LOGIN":"SIGN IN",
+            "LOGOUT":"LOGOUT"
+
+        }
+    },
+    "MAIN_PAGE":{
+        "TITLE":"ANGULAR-NESTJS-MONGODB",
+        "DESCRIPTION":"Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.",
+        "ANGULAR":{
+            "TITLE": "ANGULAR",
+            "DESCRIPTION":"IN WORKING PROGRESS",
+            "LINK_TEXT":"READ MORE"
+        },
+        "NESTJS":{
+            "TITLE": "BACKEND",
+            "DESCRIPTION":"IN WORKING PROGRESS",
+            "LINK_TEXT":"READ MORE"
+        },
+        "MONGODB":{
+            "TITLE": "DATABASE",
+            "DESCRIPTION":"IN WORKING PROGRESS",
+            "LINK_TEXT":"READ MORE"
+        },
+        "SECURITY":{
+            "TITLE": "SECURITY",
+            "DESCRIPTION":"IN WORKING PROGRESS",
+            "LINK_TEXT":"READ MORE"
+        }
+    },
+    "LOGIN":{
+        "LOGIN":"Sign In",
+        "USERNAME":"Username",
+        "PASSWORD":"Pasword",
+        "BUTTON_LOGIN":"ENTER",
+        "FORGOT_PASSWORD":"Forgot password?"
+    }
+}

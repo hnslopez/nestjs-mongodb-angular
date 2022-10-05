@@ -1,0 +1,45 @@
+{
+    "MAIN":{
+        "NAVBAR": {
+            "MAIN_PAGE": "INICIO",
+            "ANGULAR":"ANGULAR",
+            "NESTJS":"NESTJS",
+            "MONGODB":"MONGODB",
+            "ABOUT": "INFO",
+            "LOGIN":"INICIAR SESIÓN",
+            "LOGOUT":"CERRAR SESIÓN"
+
+        }
+    },
+    "MAIN_PAGE":{
+        "TITLE":"ANGULAR-NESTJS-MONGODB",
+        "DESCRIPTION":"Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.",
+        "ANGULAR":{
+            "TITLE": "FRONTEND",
+            "DESCRIPTION":"Para la creación de la vista de la WEB APP, se utilizaron diferentes librerias solo el diseño tales como NG-ZORRO y Bootstrap. En cuanto a la funcionalidad se utilizaron buenas practicas, sistema de autenticación basada en JWT con almacenamiento tanto en cookies como en localStorage, soporte a multi idioma. ",
+            "LINK_TEXT":"LEER MAS"
+        },
+        "NESTJS":{
+            "TITLE": "BACKEND",
+            "DESCRIPTION":"El sistema cuenta con 2 tipos de roles, los cuales son validados por decoradores en cada ruta de acceso (GET, POST, PATCH, DELETE), ademas de contar con sanitización de codigo, uso de regex, control de rutas publicas y privadas, variables de entorno, rate limits y uso de JWT (JSON WEB TOKEN).",
+            "LINK_TEXT":"LEER MAS"
+        },
+        "MONGODB":{
+            "TITLE": "DATABASE",
+            "DESCRIPTION":"Base de datos normalizada dividiendo perfil del usuario por buenas practicas. Utilizando un sistema de Role Based Access Control (RBAC) para uno de los sistemas de roles, encriptación y adicionalmente almacenando JWT de cada usuario iniciado para mantener con su sesión de manera indefinida.",
+            "LINK_TEXT":"LEER MAS"
+        },
+        "SECURITY":{
+            "TITLE": "SEGURIDAD",
+            "DESCRIPTION":"Se realizaron multiples tecnicas de pestesting para controlar el nivel seguridad del software, utilizando softwares como OWAZAP ZAP para identificar las vulneabilidades del sistema y asi poder corregirlas...",
+            "LINK_TEXT":"LEER MAS"
+        }
+    },
+    "LOGIN":{
+        "LOGIN":"Iniciar sesión",
+        "USERNAME":"Usuario",
+        "PASSWORD":"Contraseña",
+        "BUTTON_LOGIN":"INICIAR",
+        "FORGOT_PASSWORD":"¿No recuerdas tu contraseña?"
+    }
+}
