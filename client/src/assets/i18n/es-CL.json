@@ -13,7 +13,7 @@
     },
     "MAIN_PAGE":{
         "TITLE":"ANGULAR-NESTJS-MONGODB",
-        "DESCRIPTION":"Este proyecto es creado con el objectivo de crear una website con altos niveles de seguridad y calidad, utlizando buenas practicas ademas de softwares como Owasp Zap para asegurar la calidad.",
+        "DESCRIPTION":"Este proyecto es creado con el objectivo de crear una website con altos niveles de seguridad y calidad, utlizando buenas practicas ademas de programas como Owasp Zap.",
         "BUTTON_REPOSITORY":"REPOSITORIO",
         "ANGULAR":{
             "TITLE": "FRONTEND",

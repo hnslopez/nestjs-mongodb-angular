@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  repository;
+
   ngOnInit(): void {
+  }
+
+  constructor(private sanitizer:DomSanitizer) { 
+    this.repository = sanitizer.bypassSecurityTrustUrl('https://github.com/hnslopez/nestjs-mongodb-angular');
   }
 
 }
