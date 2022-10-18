@@ -13,7 +13,8 @@
     },
     "MAIN_PAGE":{
         "TITLE":"ANGULAR-NESTJS-MONGODB",
-        "DESCRIPTION":"Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.",
+        "DESCRIPTION":"Este proyecto es creado con el objectivo de crear una website con altos niveles de seguridad y calidad, utlizando buenas practicas ademas de softwares como Owasp Zap para asegurar la calidad.",
+        "BUTTON_REPOSITORY":"REPOSITORIO",
         "ANGULAR":{
             "TITLE": "FRONTEND",
             "DESCRIPTION":"Para la creación de la vista de la WEB APP, se utilizaron diferentes librerias solo el diseño tales como NG-ZORRO y Bootstrap. En cuanto a la funcionalidad se utilizaron buenas practicas, sistema de autenticación basada en JWT con almacenamiento tanto en cookies como en localStorage, soporte a multi idioma. ",
@@ -21,7 +22,7 @@
         },
         "NESTJS":{
             "TITLE": "BACKEND",
-            "DESCRIPTION":"El sistema cuenta con 2 tipos de roles, los cuales son validados por decoradores en cada ruta de acceso (GET, POST, PATCH, DELETE), ademas de contar con sanitización de codigo, uso de regex, control de rutas publicas y privadas, variables de entorno, rate limits y uso de JWT (JSON WEB TOKEN).",
+            "DESCRIPTION":"El sistema cuenta con 2 tipos de roles, los cuales son validados por decoradores en cada ruta de acceso, ademas de contar con sanitización de codigo, uso de regex, control de rutas publicas y privadas, variables de entorno, rate limits y uso de JWT (JSON WEB TOKEN).",
             "LINK_TEXT":"LEER MAS"
         },
         "MONGODB":{
