@@ -17,12 +17,13 @@ export class FooterComponent implements OnInit {
     {value:"es-CL",name:'Español'},
     {value:"en-US", name:'English'}
   ];
-  selectedValue = 'es-CL';
+  selectedValue!: 'es-CL' | 'en-US';
 
   //trackBy 
   trackByValue(index: number, language:any):string{
       return language.value;
   }
+
 
   languageChange(params:any) {
     this.app.switchLanguage(params);
@@ -34,6 +35,8 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    const languageValue =  localStorage.getItem('locale') as 'es-CL';
+    this.selectedValue = languageValue || 'es-CL';
     this.year = new Date().getFullYear();
   }
 

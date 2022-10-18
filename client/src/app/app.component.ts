@@ -12,6 +12,8 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent implements OnInit {
 
+
+
   ngOnInit(): void {
     //title
     this.router.events.pipe(
@@ -38,12 +40,15 @@ export class AppComponent implements OnInit {
   constructor(
     private router: Router, 
     private titleService: Title, 
-    public translateService: TranslateService) {
+    public translate: TranslateService) {
+      const defaultLenguage = localStorage.getItem('locale');
+      translate.setDefaultLang( defaultLenguage ||'es-CL');
   }
 
   //TODO: SAVE LANGUAGE VALUE
-  public switchLanguage(language: string): void{
-    this.translateService.use(language);
+  public switchLanguage(language: 'es-CL' | 'en-US'): void{
+    localStorage.setItem('locale',language);
+    this.translate.use(language);
   }
 
 }

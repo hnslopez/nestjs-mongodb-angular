@@ -68,8 +68,7 @@ export function createTranslateLoader(http: HttpClient) {
         provide: TranslateLoader,
         useFactory: (createTranslateLoader),
         deps: [HttpClient],
-      },
-      defaultLanguage: 'es-CL',
+      }
     }),
     StoreModule.forRoot({}, {}),
     EffectsModule.forRoot([]),
