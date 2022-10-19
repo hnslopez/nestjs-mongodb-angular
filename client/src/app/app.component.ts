@@ -38,16 +38,22 @@ export class AppComponent implements OnInit {
 
 
   constructor(
-    private router: Router, 
-    private titleService: Title, 
+    private router: Router,
+    private titleService: Title,
     public translate: TranslateService) {
-      const defaultLenguage = localStorage.getItem('locale');
-      translate.setDefaultLang( defaultLenguage ||'es-CL');
+    
+    let defaultLenguage = localStorage.getItem('locale') || 'es-CL';
+
+    if(!['es-CL', 'en-US'].includes(defaultLenguage)){
+      defaultLenguage = 'es-CL';
+      localStorage.setItem('locale', defaultLenguage);
+    } 
+
+    translate.setDefaultLang(defaultLenguage || 'es-CL');
   }
 
-  //TODO: SAVE LANGUAGE VALUE
-  public switchLanguage(language: 'es-CL' | 'en-US'): void{
-    localStorage.setItem('locale',language);
+  public switchLanguage(language: 'es-CL' | 'en-US'): void {
+    localStorage.setItem('locale', language);
     this.translate.use(language);
   }
 
