@@ -6,12 +6,23 @@ import * as session from 'express-session';
 import * as passport from 'passport';
 import * as cookieParser from 'cookie-parser';
 import { GlobalService } from './common/services/global.service';
+import { HashHelper } from './common/helper';
+
 const MongoStore = require('connect-mongo')
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  // app.use(helmet());
+  app.use(helmet());
+  
+  //TODO: UPDATE EACH CALL PAGE
+  app.use(helmet.contentSecurityPolicy({
+    useDefaults:true,
+    directives:{
+      "script-src": ["'strict-dynamic'",`'nonce-${HashHelper.generateNonce()}'`]
+    }
+  }))
+
   app.enableCors({
     origin: ['http://localhost:4200','http://localhost:8081'],
     credentials: true,
@@ -39,6 +50,7 @@ async function bootstrap() {
   app.use(cookieParser(process.env.COOKIE_SECRET));
   app.use(passport.initialize());
   app.use(passport.session());
+  
 
 
   await app.listen(process.env.PORT || 4000);

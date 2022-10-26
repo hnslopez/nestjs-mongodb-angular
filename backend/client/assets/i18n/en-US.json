@@ -14,6 +14,7 @@
     "MAIN_PAGE":{
         "TITLE":"ANGULAR-NESTJS-MONGODB",
         "DESCRIPTION":"Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.",
+        "BUTTON_REPOSITORY":"REPOSITORY",
         "ANGULAR":{
             "TITLE": "ANGULAR",
             "DESCRIPTION":"IN WORKING PROGRESS",
