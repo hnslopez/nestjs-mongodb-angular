@@ -19,7 +19,7 @@ async function bootstrap() {
   app.use(helmet.contentSecurityPolicy({
     useDefaults:true,
     directives:{
-      "script-src": ["'strict-dynamic'",`'nonce-${HashHelper.generateNonce()}'`]
+      "script-src-attr": ["'self'",`'unsafe-inline'`]
     }
   }))
 

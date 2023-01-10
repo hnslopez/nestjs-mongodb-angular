@@ -15,7 +15,7 @@ export const initialState: AuthState = {
   accessTokenStatus: TokenStatus.PENDING,
   refreshTokenStatus: TokenStatus.PENDING,
   isLoadingLogin: false,
-  hasLoginError:  {error:false, code:202},
+  hasLoginError:  false,
 };
 
 const reducer = createReducer(
@@ -27,8 +27,7 @@ const reducer = createReducer(
     (state): AuthState => ({
       ...state,
       accessTokenStatus: TokenStatus.VALIDATING,
-      isLoadingLogin: true,
-      hasLoginError: {error:false, code:202},
+      isLoadingLogin: true
     })
   ),
 
@@ -61,7 +60,9 @@ const reducer = createReducer(
       isLoadingLogin: false,
       accessTokenStatus: TokenStatus.INVALID,
       refreshTokenStatus: TokenStatus.INVALID,
-      hasLoginError: {error:action.type === '[Auth] Login Failure' && !!action.error, code: parseInt(action.error.message.split(' ')[5])},
+      hasLoginError: action.type === '[Auth] Login Failure' && !!action.error,
+
+     // hasLoginError: {error:action.type === '[Auth] Login Failure' && !!action.error, code: parseInt(action.error.message.split(' ')[5])},
     })
   ),
 

@@ -11,7 +11,7 @@ export interface AuthState {
   accessTokenStatus: TokenStatus;
   refreshTokenStatus: TokenStatus;
   isLoadingLogin: boolean;
-  hasLoginError: {error:boolean, code:number};
+  hasLoginError: boolean;
 }
 
 export interface AuthUser {

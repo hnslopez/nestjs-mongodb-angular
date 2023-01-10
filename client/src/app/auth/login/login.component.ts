@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthFacade } from 'src/app/auth/store/auth.facade';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   submitForm(): void {
     if (this.validateForm.valid) {
       const {password, userName} = this.validateForm.value;
-      this.authFacade.login(userName, password);
+      this.authFacade.login(userName, password)
 
     } else {
       Object.values(this.validateForm.controls).forEach(control => {
@@ -38,10 +39,11 @@ export class LoginComponent implements OnInit {
       )
   }
 
-  constructor(private fb: FormBuilder,private authFacade: AuthFacade,private notification: NzNotificationService) {}
-
-  ngOnInit(): void {
+  constructor(private fb: FormBuilder,private authFacade: AuthFacade,private notification: NzNotificationService) {
+  //  this.showLoginError$.pipe().subscribe(console.log)
+    /*
     this.showLoginError$.subscribe( data =>{
+      console.log(data)
       if(data.error){ 
         if(data.code == 401){
           this.createNotification('Verifique datos ingresados', 'Usuario y/o contraseña son incorrectos');
@@ -52,12 +54,14 @@ export class LoginComponent implements OnInit {
         }
       }
     });
+    */
 
+  }
+
+  ngOnInit(): void {
     this.validateForm = this.fb.group({
       userName: [null, [Validators.required,Validators.minLength(3),Validators.maxLength(16)]],
       password: [null, [Validators.required,Validators.minLength(3),Validators.maxLength(16)]],
     });
   }
-
-
 }

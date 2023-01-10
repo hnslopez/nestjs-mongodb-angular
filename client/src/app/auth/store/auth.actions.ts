@@ -8,9 +8,7 @@ export const loginRequest = createAction(
   props<{ username: string; password: string }>()
 );
 export const loginSuccess = createAction('[Auth] Login Success');
-export const loginFailure = createAction(
-  '[Auth] Login Failure',
-  props<{ error: Error }>()
+export const loginFailure = createAction('[Auth] Login Failure',props<{ error: Error }>()
 );
 
 // Logout

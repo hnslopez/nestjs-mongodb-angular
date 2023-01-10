@@ -40,10 +40,7 @@ export class AuthInterceptor implements HttpInterceptor {
     return next.handle(req).pipe(s => this.handleErrors(s, req.url));
   }
 
-  private handleErrors(
-    source: Observable<HttpEvent<unknown>>,
-    urlPath: string
-  ): Observable<HttpEvent<unknown>> {
+  private handleErrors(source: Observable<HttpEvent<unknown>>, urlPath: string): Observable<HttpEvent<unknown>> {
     return source.pipe(
       catchError((error: HttpErrorResponse) => {
         // try to avoid errors on logout
