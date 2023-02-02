@@ -316,20 +316,20 @@ Login funcional
 
 
 ----
-inscripcion de ramos para el citt
+inscripcion de ramos para el --
 	el estudiante escanea el qr en la puerta
 	ese qr manda a un formulario que debe llenar la persona
-	se registra la persona en el citt, se ingresa a un grupo  de whatapp
+	se registra la persona en el --, se ingresa a un grupo  de whatapp
 	
 
-talleres del citt
+talleres
 	cualquier alumno o profesor y poder crear un taller (cualquiera), una vez creado se avisa al grupo
 	luego las personas que van pueden ir (no hay registro de asistencia)
 	cuando se terminar el taller se crea un registro con fotos
 
 convenios
-	los profesores tienen contactos con otras empresas para tener convios con el citt.
-	el citt en si no tiene convenios con empresas.
+	los profesores tienen contactos con otras empresas para tener convios.
+	el ---- en si no tiene convenios con empresas.
 
 
 
@@ -342,12 +342,6 @@ convenios
 Se coloca el nombre completo de la actividad (Por ej. "Realizar levantamiento de información", "Elaborar Diseño Técnico", "Desarrollar Componente Java 001").
 
 sameSite, investigar (?
-
-
-
-
-//---ejemplo
-https://enlink.themenate.net/apps/file-manager
 
 
 
