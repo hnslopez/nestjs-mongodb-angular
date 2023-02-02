@@ -24,11 +24,13 @@ async function bootstrap() {
     }
   }))
 
+  /*
   app.use(expressCspHeader({
     directives: {
       "script-src": [NONCE, "'strict-dynamic'"]
     }
   }))
+  */
 
   app.enableCors({
     origin: ['http://localhost:4200', 'http://localhost:8081'],
