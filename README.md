@@ -4,6 +4,12 @@ La aplicación se construyó con Nest.js en el lado del servidor, MongoDB como b
 
 Es importante tener en cuenta que, aunque el proyecto ha sido modificado después de su cancelación, todavía presenta algunas incongruencias y falta de documentación. Puedes explorar el código y ver cómo se podría haber construido una aplicación web escalable y segura para administrar información de usuarios, eventos y convenios a nivel global, con un backend centralizado y frontends individuales para cada sede, pero ten en cuenta que puede requerir algún trabajo adicional para entender completamente el código.
 
+
+El sistema de autenticación de angular se baso en el siguiente proyecto
+https://github.com/nikosanif/angular-authentication
+
+
+
 # Imagenes del proyecto
 
 ![image](https://user-images.githubusercontent.com/80982226/216218106-3a785062-69f1-40bd-9a60-bae36ec0302f.png)
