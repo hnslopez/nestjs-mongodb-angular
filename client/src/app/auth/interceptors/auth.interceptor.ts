@@ -28,8 +28,7 @@ import {
         req = req.clone({
           setHeaders: { Authorization: `Bearer ${accessToken}`,credentials: 'include', 
           code:'U2FsdGVkX189kbOsDVLvhj1kqsIRPfBUSaAcdA5xFFsVbytGQDeyP1ujS4HMRYmt' },
-          // !Attention: it used only at Fake API, remove it in real app
-          //params: req.params.set('auth-token', accessToken),
+
         });
       }
   

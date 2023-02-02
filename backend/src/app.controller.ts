@@ -51,12 +51,13 @@ export class AppController {
   @Post('auth/v2/refresh')
   @HttpCode(HttpStatus.OK)
   async refreshTokens(@User() user: IUserHash,
-  @Res({ passthrough: true }) res: Response
+  @Res({ passthrough: true }) res: Response,
+  @Request() req
   ) {
     const data = await this.authService.refreshToken(user.sub,user.token);
     res.cookie('Authorization', data.refresh_token,{httpOnly: true,signed:true, sameSite:true, secure:true})
-   
     delete data.refresh_token;
+    data.nonce = req.nonce;
     return data;
   }
 

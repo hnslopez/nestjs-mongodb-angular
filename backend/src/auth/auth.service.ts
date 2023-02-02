@@ -70,7 +70,8 @@ export class AuthService {
 
         return {
             access_token: token,
-            refresh_token: refresh
+            refresh_token: refresh,
+            nonce:''
         }
 
 

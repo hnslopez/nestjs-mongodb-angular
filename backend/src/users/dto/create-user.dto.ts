@@ -66,7 +66,7 @@ export class CreateUserDto {
   readonly themesInterest:[string];
 
 
-  @IsNumberString({message:'Debe ingresar el numero del semestre que se encuentra.'})
+  @IsNumberString()//{message:'Debe ingresar el numero del semestre que se encuentra.'})
   @IsNotEmpty({message:'Debe ingresar en el semestre que se encuentra actualmente.'})
   readonly semesterProgress:number;
 
