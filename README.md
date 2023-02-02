@@ -1,2 +1,5 @@
-# nestjs-mongodb-angular [WIP]
-[WIP] Proyecto de Nestjs usando mongodb y angular, creando un web app con sistema de Role Based Access Control, adicionalmente con sistema de autenticación (JWT) mediante refresh token.
+Este proyecto fue originalmente una aplicación web diseñada para la administración de estudiantes a nivel global. La idea era crear un backend global que alimentaría a cada sede mientras ellos tendrian su propio frontend. Los estudiantes podrían registrarse y su información sería almacenada en una base de datos MongoDB. Además, la aplicación también permitiría almacenar información sobre eventos y otras cosas.
+
+La aplicación se construyó con Nest.js en el lado del servidor, MongoDB como base de datos y Angular en el lado del cliente base. Sin embargo, el proyecto ha sido cancelado y luego modificado, y ahora está disponible como muestra en GitHub.
+
+Es importante tener en cuenta que, aunque el proyecto ha sido modificado después de su cancelación, todavía presenta algunas incongruencias y falta de documentación. Puedes explorar el código y ver cómo se podría haber construido una aplicación web escalable y segura para administrar información de estudiantes, eventos y convenios a nivel global, con un backend centralizado y frontends individuales para cada sede, pero ten en cuenta que puede requerir algún trabajo adicional para entender completamente el código.
